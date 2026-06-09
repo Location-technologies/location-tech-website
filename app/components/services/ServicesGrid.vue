@@ -5,7 +5,7 @@ const { data } = await useAsyncData('services-grid', () =>
 
 const services = computed(() => data.value?.services ?? [])
 
-/** Middle row (cards 3 & 4) tinted on desktop — matches HTML .svc-card.tint */
+/** Middle row (cards 3 & 4) tinted on desktop — matches HTML .svc-card.tint  */
 function isTintedDesktop(index: number) {
   return index === 2 || index === 3
 }
