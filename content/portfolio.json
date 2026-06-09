@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "slug": "national-utility-gis",
+      "title": "National Utility GIS Platform",
+      "client": "PowerGrid Authority",
+      "category": "gis",
+      "thumbnail": "/images/portfolio/placeholder-1.jpg",
+      "shortDesc": "Enterprise web GIS for 12,000+ km of transmission infrastructure.",
+      "description": "Delivered a full-stack mapping platform with layer management, asset editing workflows, and role-based access for 200+ field engineers. Integrated with existing SCADA feeds for live substation status overlays.",
+      "technologies": ["PostGIS", "MapLibre GL", "Nuxt", "Node.js"],
+      "year": 2025,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "slug": "logistics-fleet-tracker",
+      "title": "Logistics Fleet Tracker",
+      "client": "TransPak Logistics",
+      "category": "tracking",
+      "thumbnail": "/images/portfolio/placeholder-2.jpg",
+      "shortDesc": "Real-time tracking for 450+ delivery vehicles across three cities.",
+      "description": "Built a fleet management dashboard with live GPS tracking, automated ETA calculations, and geofence-based delivery confirmations. Reduced missed delivery windows by 34% in the first quarter after launch.",
+      "technologies": ["Vue.js", "MQTT", "TimescaleDB", "Leaflet"],
+      "year": 2024,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "slug": "warehouse-geofence-system",
+      "title": "Warehouse Geofence System",
+      "client": "ColdChain Warehousing",
+      "category": "geofencing",
+      "thumbnail": "/images/portfolio/placeholder-3.jpg",
+      "shortDesc": "Automated dock arrival alerts across 18 distribution centers.",
+      "description": "Implemented circular and polygon geofences around loading bays with SMS and webhook notifications triggered on truck entry. Integrated with the client's TMS for automatic gate pass generation.",
+      "technologies": ["Node.js", "Redis", "Twilio", "PostgreSQL"],
+      "year": 2024,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "slug": "retail-catchment-analysis",
+      "title": "Retail Catchment Analysis",
+      "client": "UrbanMart Retail Group",
+      "category": "analytics",
+      "thumbnail": "/images/portfolio/placeholder-4.jpg",
+      "shortDesc": "Drive-time isochrones and demographic overlays for site selection.",
+      "description": "Analyzed 150+ candidate store locations using 10-minute drive-time polygons, population density layers, and competitor proximity scoring. The model guided expansion into five new markets with validated revenue projections.",
+      "technologies": ["Python", "PostGIS", "QGIS", "D3.js"],
+      "year": 2023,
+      "featured": true
+    },
+    {
+      "id": 5,
+      "slug": "agricultural-field-survey",
+      "title": "Agricultural Field Survey App",
+      "client": "AgriGrow Cooperative",
+      "category": "gis",
+      "thumbnail": "/images/portfolio/placeholder-5.jpg",
+      "shortDesc": "Offline mobile app for crop boundary mapping across 8,000 hectares.",
+      "description": "Developed an Android field survey tool with offline map tiles, GPS boundary tracing, and photo attachments. Data syncs to a central PostGIS database used for yield forecasting and subsidy compliance.",
+      "technologies": ["React Native", "Mapbox", "PostGIS", "AWS S3"],
+      "year": 2023,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "slug": "municipal-asset-tracking",
+      "title": "Municipal Asset Tracking",
+      "client": "City of Lahore IT Dept",
+      "category": "tracking",
+      "thumbnail": "/images/portfolio/placeholder-6.jpg",
+      "shortDesc": "GPS tracking and maintenance scheduling for 300 municipal vehicles.",
+      "description": "Deployed GPS hardware and a web dashboard for the municipal fleet including garbage trucks, water tankers, and maintenance vans. Automated maintenance reminders based on odometer readings and engine hours.",
+      "technologies": ["Nuxt", "InfluxDB", "Grafana", "OpenStreetMap"],
+      "year": 2025,
+      "featured": false
+    }
+  ]
+}
