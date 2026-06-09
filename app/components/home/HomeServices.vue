@@ -17,14 +17,17 @@ const services = computed(() => data.value?.services?.slice(0, 3) ?? [])
         subtitle="End-to-end location intelligence — from spatial data and mapping to live tracking and automated geofencing."
         class="text-white [&_h2]:text-white [&_h2]:text-[clamp(2.125rem,4vw,3rem)] [&_h2]:font-extrabold [&_p]:text-[#94A6BE]"
       >
-        What We Do
-        <span class="underline-grad" />
+        What We Do<span class="underline-grad" />
       </BaseSectionHeader>
 
       <div class="grid gap-7 md:grid-cols-3">
         <BaseCard
-          v-for="service in services"
+          v-for="(service, i) in services"
           :key="service.id"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible="{ opacity: 1, y: 0, transition: { delay: Math.min(i * 100, 400), duration: 500 } }"
+          :visible-once="true"
           variant="glass"
           class="group relative overflow-hidden transition-all duration-350 hover:-translate-y-2.5 hover:border-brand-cyan/45 hover:bg-brand-cyan/5 hover:shadow-[0_26px_60px_-28px_rgba(0,180,216,0.55)]"
         >

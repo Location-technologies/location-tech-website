@@ -14,22 +14,14 @@ function isTintedDesktop(index: number) {
 <template>
   <section class="bg-white py-[110px]">
     <div class="mx-auto max-w-[1240px] px-4 sm:px-8">
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="mx-auto mb-[60px] max-w-[660px] text-center"
+      <BaseSectionHeader
+        centered
+        eyebrow="What We Offer"
+        subtitle="From spatial data and live tracking to custom platforms — everything you need to map, track, and connect, under one roof."
+        class="mx-auto mb-[60px] max-w-[660px] [&_h2]:inline-block [&_p]:text-[#5b6b7e]"
       >
-        <span class="block font-dm text-[13px] font-semibold tracking-[0.18em] text-[#0090ad] uppercase">What We Offer</span>
-        <h2 class="mt-3.5 inline-block font-syne text-[clamp(2.125rem,4vw,3rem)] font-extrabold text-brand-dark">
-          Full-Spectrum Location Tech
-          <span class="underline-grad" />
-        </h2>
-        <p class="mt-5 text-[17px] leading-[1.6] text-[#5b6b7e]">
-          From spatial data and live tracking to custom platforms — everything you need to map, track, and connect, under one roof.
-        </p>
-      </div>
+        Full-Spectrum Location Tech<span class="underline-grad" />
+      </BaseSectionHeader>
 
       <div class="grid gap-[26px] md:grid-cols-2">
         <article
@@ -37,7 +29,7 @@ function isTintedDesktop(index: number) {
           :key="service.id"
           v-motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: index * 80 } }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: Math.min(index * 100, 400) } }"
           :visible-once="true"
           class="svc-card group relative flex items-start gap-[26px] overflow-hidden rounded-[20px] border border-[#e7eef0] bg-white p-[40px_38px] shadow-[0_14px_36px_-26px_rgba(15,40,60,0.35)] transition-all duration-320 max-[560px]:flex-col max-[560px]:gap-[18px] max-[560px]:p-[32px_26px]"
           :class="[
@@ -85,7 +77,7 @@ function isTintedDesktop(index: number) {
 }
 
 .svc-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.4);
   box-shadow: 0 30px 56px -28px rgba(0, 150, 180, 0.4);
 }

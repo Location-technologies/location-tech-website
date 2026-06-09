@@ -37,7 +37,7 @@ const headerClasses = computed(() => [
 ])
 
 const navLinkClasses =
-  'relative py-1.5 text-[15px] font-medium text-[#C3D0E0] transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-sm after:bg-gradient-to-r after:from-brand-cyan after:to-brand-green after:transition-[width] after:duration-300 hover:after:w-full'
+  'relative py-1.5 text-[15px] font-medium text-[#C3D0E0] transition-colors duration-200 hover:text-brand-cyan after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-sm after:bg-gradient-to-r after:from-brand-cyan after:to-brand-green after:transition-[width] after:duration-300 hover:after:w-full'
 </script>
 
 <template>
@@ -63,7 +63,7 @@ const navLinkClasses =
       <div class="hidden min-[981px]:flex items-center gap-[18px]">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full gradient-bg px-[30px] py-[15px] font-dm text-base font-semibold text-[#04121C] shadow-[0_8px_28px_-8px_rgba(0,180,216,0.55)] transition-all duration-250 hover:-translate-y-0.5 hover:shadow-[0_14px_38px_-8px_rgba(0,200,150,0.6)]"
+          class="inline-flex items-center gap-2.5 whitespace-nowrap rounded-full gradient-bg px-[30px] py-[15px] font-dm text-base font-semibold text-[#04121C] shadow-[0_8px_28px_-8px_rgba(0,180,216,0.55)] transition-all duration-250 hover:scale-105 hover:shadow-[0_14px_38px_-8px_rgba(0,200,150,0.6)]"
         >
           Get in Touch
         </NuxtLink>
@@ -111,7 +111,7 @@ const navLinkClasses =
     </NuxtLink>
     <NuxtLink
       to="/contact"
-      class="mt-[22px] inline-flex items-center justify-center gap-2.5 rounded-full gradient-bg px-[30px] py-[15px] font-dm text-base font-semibold text-[#04121C] shadow-[0_8px_28px_-8px_rgba(0,180,216,0.55)]"
+      class="mt-[22px] inline-flex items-center justify-center gap-2.5 rounded-full gradient-bg px-[30px] py-[15px] font-dm text-base font-semibold text-[#04121C] shadow-[0_8px_28px_-8px_rgba(0,180,216,0.55)] transition-all duration-250 hover:scale-105 hover:shadow-[0_14px_38px_-8px_rgba(0,200,150,0.6)]"
       @click="mobileOpen = false"
     >
       Get in Touch

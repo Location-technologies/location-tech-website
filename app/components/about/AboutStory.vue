@@ -25,6 +25,9 @@ const milestones = [
     alt: true,
   },
 ]
+
+const { el: storyEl, isVisible: storyVisible } = useScrollReveal()
+const { el: timelineEl, isVisible: timelineVisible } = useScrollReveal()
 </script>
 
 <template>
@@ -32,10 +35,11 @@ const milestones = [
     <div class="mx-auto max-w-[1240px] px-4 sm:px-8">
       <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-[72px]">
         <div
-          v-motion
-          :initial="{ opacity: 0, y: 26 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-          :visible-once="true"
+          ref="storyEl"
+          :class="[
+            'transition-all duration-700',
+            storyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+          ]"
         >
           <div class="font-syne text-[22px] font-extrabold tracking-[0.1em] text-brand-cyan">
             01
@@ -58,11 +62,11 @@ const milestones = [
         </div>
 
         <div
-          v-motion
-          :initial="{ opacity: 0, y: 26 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: 150 } }"
-          :visible-once="true"
-          class="relative pl-10"
+          ref="timelineEl"
+          :class="[
+            'relative pl-10 transition-all duration-700 delay-150',
+            timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+          ]"
         >
           <div
             class="absolute top-1.5 bottom-1.5 left-[9px] w-0.5 rounded-sm bg-gradient-to-b from-brand-cyan to-brand-green"

@@ -11,22 +11,14 @@ const steps = [
   <section class="process relative overflow-hidden bg-gradient-to-b from-brand-dark to-[#0B1A2E] py-[110px]">
     <div class="dot-layer opacity-[0.04]" aria-hidden="true" />
     <div class="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-8">
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="relative z-[2] mx-auto mb-16 max-w-[640px] text-center"
+      <BaseSectionHeader
+        centered
+        eyebrow="Our Process"
+        subtitle="A clear, proven path from first conversation to live deployment — and support that doesn't stop there."
+        class="relative z-[2] mx-auto mb-16 max-w-[640px] [&_h2]:inline-block [&_h2]:text-white [&_p]:text-[#94A6BE]"
       >
-        <span class="block font-dm text-[13px] font-semibold tracking-[0.18em] text-brand-cyan uppercase">Our Process</span>
-        <h2 class="mt-3.5 inline-block font-syne text-[clamp(2.125rem,4vw,3rem)] font-extrabold text-white">
-          How We Work
-          <span class="underline-grad" />
-        </h2>
-        <p class="mt-5 text-[17px] leading-[1.6] text-[#94A6BE]">
-          A clear, proven path from first conversation to live deployment — and support that doesn't stop there.
-        </p>
-      </div>
+        How We Work<span class="underline-grad" />
+      </BaseSectionHeader>
 
       <div class="steps relative z-[2] grid grid-cols-1 gap-11 min-[561px]:grid-cols-2 min-[561px]:gap-x-6 min-[561px]:gap-y-11 min-[981px]:grid-cols-4 min-[981px]:gap-6">
         <div
@@ -38,7 +30,7 @@ const steps = [
           :key="step.n"
           v-motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: index * 100 } }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: Math.min(index * 100, 400) } }"
           :visible-once="true"
           class="step relative z-[2] px-2 text-center"
         >

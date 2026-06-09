@@ -70,6 +70,9 @@ async function handleSubmit() {
 }
 
 const inputBase = 'w-full rounded-[11px] border border-white/10 border-b-2 border-b-white/16 bg-[rgba(8,17,32,0.6)] px-4 py-3.5 font-dm text-[15.5px] text-[#E6EDF6] outline-none transition-all placeholder:text-[#5d6f86] focus:border-brand-cyan/30 focus:border-b-brand-cyan focus:bg-[rgba(8,17,32,0.9)] focus:shadow-[0_6px_22px_-14px_rgba(0,180,216,0.7)]'
+
+const { el: formEl, isVisible: formVisible } = useScrollReveal()
+const { el: whyEl, isVisible: whyVisible } = useScrollReveal()
 </script>
 
 <template>
@@ -77,11 +80,11 @@ const inputBase = 'w-full rounded-[11px] border border-white/10 border-b-2 borde
     <div class="mx-auto grid max-w-[1240px] items-start gap-11 px-4 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
       <!-- Form card -->
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="rounded-3xl border-teal bg-white/[0.03] p-11 backdrop-blur-[14px] max-[560px]:p-8"
+        ref="formEl"
+        :class="[
+          'rounded-3xl border-teal bg-white/[0.03] p-11 backdrop-blur-[14px] transition-all duration-700 max-[560px]:p-8',
+          formVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <h2 class="mb-2 font-syne text-[30px] font-extrabold text-white">
           Send us a message
@@ -203,10 +206,11 @@ const inputBase = 'w-full rounded-[11px] border border-white/10 border-b-2 borde
 
       <!-- Why panel -->
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: 150 } }"
-        :visible-once="true"
+        ref="whyEl"
+        :class="[
+          'transition-all duration-700 delay-150',
+          whyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <span class="mb-3.5 block font-dm text-[13px] font-semibold tracking-[0.18em] text-brand-cyan uppercase">Why work with us?</span>
         <h2 class="mb-3.5 font-syne text-[30px] font-extrabold leading-tight text-white">

@@ -31,7 +31,7 @@ const cards = [
           :key="card.title"
           v-motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: index * 100 } }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: Math.min(index * 100, 400) } }"
           :visible-once="true"
           :href="card.href ?? undefined"
           class="rounded-[20px] border-teal bg-white/[0.025] px-[34px] py-10 text-center backdrop-blur-[14px] transition-all duration-350 hover:-translate-y-2 hover:border-brand-cyan/40 hover:shadow-[0_30px_60px_-30px_rgba(0,180,216,0.5)]"
