@@ -56,7 +56,13 @@ const bgGradients: Record<string, string> = {
   <section class="portfolio relative bg-gradient-to-b from-brand-dark to-[#0B1A2E] py-14 pb-[110px]">
     <div class="mx-auto max-w-[1240px] px-4 sm:px-8">
       <!-- Filter pills -->
-      <div class="mb-14 flex flex-wrap justify-center gap-3">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 26 }"
+        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
+        :visible-once="true"
+        class="mb-14 flex flex-wrap justify-center gap-3"
+      >
         <button
           v-for="cat in categories"
           :key="cat.value"
@@ -74,14 +80,18 @@ const bgGradients: Record<string, string> = {
       <!-- Project grid -->
       <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
         <article
-          v-for="project in projects"
+          v-for="(project, i) in projects"
           :key="project.id"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :visible="{ opacity: 1, y: 0, transition: { delay: Math.min(i * 100, 400), duration: 500 } }"
+          :visible-once="true"
           class="pcard group flex flex-col overflow-hidden rounded-[20px] border-teal bg-white/[0.025] transition-all duration-400"
           :class="{ 'pcard-hide': !isVisible(project.category) }"
         >
           <div class="pthumb relative h-[220px] overflow-hidden">
             <div
-              class="bgfill absolute inset-0 transition-transform duration-500 group-hover:scale-[1.08]"
+              class="bgfill absolute inset-0 transition-transform duration-500 group-hover:scale-[1.05]"
               :class="bgGradients[project.category] ?? bgGradients.gis"
             />
             <div

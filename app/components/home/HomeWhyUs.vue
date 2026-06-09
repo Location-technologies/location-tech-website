@@ -19,6 +19,9 @@ const bullets = [
 ]
 
 const barHeights = ['38%', '60%', '48%', '78%', '66%', '92%', '74%', '100%']
+
+const { el: leftEl, isVisible: leftVisible } = useScrollReveal()
+const { el: rightEl, isVisible: rightVisible } = useScrollReveal()
 </script>
 
 <template>
@@ -26,11 +29,11 @@ const barHeights = ['38%', '60%', '48%', '78%', '66%', '92%', '74%', '100%']
     <div class="mx-auto grid max-w-[1240px] items-center gap-10 px-4 min-[400px]:gap-14 min-[400px]:px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
       <!-- Left copy -->
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="min-w-0"
+        ref="leftEl"
+        :class="[
+          'min-w-0 transition-all duration-700',
+          leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
           Why Choose Us
@@ -63,11 +66,11 @@ const barHeights = ['38%', '60%', '48%', '78%', '66%', '92%', '74%', '100%']
 
       <!-- Right visual collage -->
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: 150 } }"
-        :visible-once="true"
-        class="relative mx-auto w-full max-w-[420px] min-h-[380px] min-[400px]:min-h-[440px] lg:max-w-none"
+        ref="rightEl"
+        :class="[
+          'relative mx-auto w-full max-w-[420px] min-h-[380px] transition-all duration-700 delay-150 min-[400px]:min-h-[440px] lg:max-w-none',
+          rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <div
           class="absolute -top-6 -right-6 z-0 hidden h-[200px] w-[200px] rounded-full border border-dashed border-brand-cyan/18 min-[400px]:-top-10 min-[400px]:-right-10 min-[400px]:block min-[400px]:h-[260px] min-[400px]:w-[260px]"

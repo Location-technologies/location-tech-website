@@ -16,19 +16,13 @@ const blocks = [
 <template>
   <section class="bg-gradient-to-b from-brand-dark to-[#0B1A2E] py-[110px]">
     <div class="mx-auto max-w-[1240px] px-4 sm:px-8">
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="mb-16 text-center"
+      <BaseSectionHeader
+        centered
+        eyebrow="Purpose"
+        class="mb-16 [&_h2]:inline-block [&_h2]:text-white"
       >
-        <span class="block font-dm text-[13px] font-semibold tracking-[0.18em] text-brand-cyan uppercase">Purpose</span>
-        <h2 class="mt-3.5 inline-block font-syne text-[clamp(2.125rem,4vw,3rem)] font-extrabold text-white">
-          Mission &amp; Vision
-          <span class="underline-grad" />
-        </h2>
-      </div>
+        Mission &amp; Vision<span class="underline-grad" />
+      </BaseSectionHeader>
 
       <div class="grid gap-[30px] md:grid-cols-2">
         <div
@@ -36,7 +30,7 @@ const blocks = [
           :key="block.title"
           v-motion
           :initial="{ opacity: 0, y: 26 }"
-          :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: index * 150 } }"
+          :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: Math.min(index * 100, 400) } }"
           :visible-once="true"
           class="group relative overflow-hidden rounded-[22px] border-teal bg-white/[0.025] p-[46px_44px] backdrop-blur-[14px] transition-all duration-350 hover:-translate-y-2 hover:border-brand-cyan/40 hover:shadow-[0_30px_64px_-30px_rgba(0,180,216,0.5)] min-[560px]:p-[46px_44px] max-[559px]:p-[38px_28px]"
         >

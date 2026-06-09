@@ -10,22 +10,31 @@ withDefaults(
     centered: false,
   },
 )
+
+const { el, isVisible } = useScrollReveal()
 </script>
 
 <template>
-  <div class="mb-12" :class="{ 'text-center': centered }">
+  <div
+    ref="el"
+    :class="[
+      'mb-12 transition-all duration-700',
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+      { 'text-center': centered },
+    ]"
+  >
     <span
       v-if="eyebrow"
-      class="mb-3 block font-syne text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan"
+      class="mb-3 block font-dm text-[13px] font-semibold uppercase tracking-[0.18em] text-brand-cyan"
     >
       {{ eyebrow }}
     </span>
-    <h2>
+    <h2 class="mt-3.5 inline-block font-syne text-[clamp(2.125rem,4vw,3rem)] font-extrabold text-brand-dark">
       <slot>{{ title }}</slot>
     </h2>
     <p
       v-if="subtitle"
-      class="mt-4 max-w-2xl text-lg text-brand-gray"
+      class="mt-5 max-w-2xl text-[17px] leading-[1.6] text-brand-gray"
       :class="{ 'mx-auto': centered }"
     >
       {{ subtitle }}

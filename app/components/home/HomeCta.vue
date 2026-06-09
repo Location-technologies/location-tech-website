@@ -13,17 +13,19 @@ withDefaults(
     buttonTo: '/contact',
   },
 )
+
+const { el, isVisible } = useScrollReveal()
 </script>
 
 <template>
   <section id="contact" class="overflow-hidden bg-brand-dark py-16 min-[400px]:py-24">
     <div class="mx-auto max-w-[1240px] px-4 min-[400px]:px-5 sm:px-8">
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="relative overflow-hidden rounded-[30px] gradient-bg px-5 py-12 text-center shadow-[0_40px_90px_-40px_rgba(0,180,216,0.6)] min-[400px]:px-8 min-[400px]:py-16 md:px-16 md:py-[70px]"
+        ref="el"
+        :class="[
+          'relative overflow-hidden rounded-[30px] gradient-bg px-5 py-12 text-center shadow-[0_40px_90px_-40px_rgba(0,180,216,0.6)] transition-all duration-700 min-[400px]:px-8 min-[400px]:py-16 md:px-16 md:py-[70px]',
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <div
           class="pointer-events-none absolute inset-0 opacity-[0.18]"

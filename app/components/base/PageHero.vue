@@ -24,7 +24,12 @@ defineProps<{
     />
 
     <div class="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-8">
-      <nav class="mb-[22px] flex items-center justify-center gap-2.5 text-sm text-brand-gray">
+      <nav
+        v-motion
+        :initial="{ opacity: 0 }"
+        :enter="{ opacity: 1, transition: { duration: 500, delay: 0 } }"
+        class="mb-[22px] flex items-center justify-center gap-2.5 text-sm text-brand-gray"
+      >
         <NuxtLink to="/" class="text-[#94A6BE] transition-colors hover:text-brand-cyan">
           Home
         </NuxtLink>
@@ -32,11 +37,21 @@ defineProps<{
         <span class="text-brand-cyan">{{ breadcrumb }}</span>
       </nav>
 
-      <h1 class="font-syne text-[clamp(2.875rem,6vw,5.125rem)] font-extrabold leading-none text-white">
+      <h1
+        v-motion
+        :initial="{ opacity: 0, y: 12 }"
+        :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 80 } }"
+        class="font-syne text-[clamp(2.875rem,6vw,5.125rem)] font-extrabold leading-none text-white"
+      >
         {{ headingLight }}<span class="gradient-text-hero">{{ headingGradient }}</span>
       </h1>
 
-      <p class="mx-auto mt-[22px] max-w-[620px] text-[clamp(17px,1.5vw,21px)] text-[#94A6BE]">
+      <p
+        v-motion
+        :initial="{ opacity: 0 }"
+        :enter="{ opacity: 1, transition: { duration: 500, delay: 160 } }"
+        class="mx-auto mt-[22px] max-w-[620px] text-[clamp(17px,1.5vw,21px)] text-[#94A6BE]"
+      >
         {{ subtitle }}
       </p>
     </div>

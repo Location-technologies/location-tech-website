@@ -4,6 +4,9 @@ const stats = [
   { value: '99.8%', label: 'System uptime' },
   { value: '3-mo', label: 'Delivery time' },
 ]
+
+const { el: copyEl, isVisible: copyVisible } = useScrollReveal()
+const { el: visualEl, isVisible: visualVisible } = useScrollReveal()
 </script>
 
 <template>
@@ -15,11 +18,11 @@ const stats = [
 
     <div class="case-grid relative z-[2] mx-auto grid max-w-[1240px] items-center gap-16 px-4 sm:px-8 lg:grid-cols-2">
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-        :visible-once="true"
-        class="case-copy"
+        ref="copyEl"
+        :class="[
+          'case-copy transition-all duration-700',
+          copyVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <div class="case-num gradient-text-hero font-syne text-[84px] font-extrabold leading-none">
           01
@@ -49,11 +52,11 @@ const stats = [
       </div>
 
       <div
-        v-motion
-        :initial="{ opacity: 0, y: 26 }"
-        :visible="{ opacity: 1, y: 0, transition: { duration: 700, delay: 150 } }"
-        :visible-once="true"
-        class="case-visual relative"
+        ref="visualEl"
+        :class="[
+          'case-visual relative transition-all duration-700 delay-150',
+          visualVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        ]"
       >
         <div class="map-card relative h-[420px] overflow-hidden rounded-[22px] border border-brand-cyan/45 bg-gradient-to-br from-[#0c2236] to-brand-dark shadow-[0_0_60px_-12px_rgba(0,180,216,0.45),inset_0_0_80px_rgba(0,180,216,0.06)]">
           <div
