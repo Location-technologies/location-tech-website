@@ -6,7 +6,7 @@
       "title": "GIS & Mapping",
       "icon": "mdi:map",
       "shortDesc": "Interactive maps and spatial data platforms tailored to your operations.",
-      "description": "We design and deploy custom GIS solutions — from web-based map viewers to enterprise spatial databases. Our team integrates satellite imagery, cadastral data, and real-time feeds into unified mapping platforms that support decision-making across utilities, logistics, and government sectors.",
+      "description": "Custom GIS solutions, spatial data analysis, and map digitization. We build the geographic systems that turn complex datasets into clear, interactive maps your teams can act on.",
       "category": "gis"
     },
     {
@@ -15,43 +15,43 @@
       "title": "GPS Fleet Tracking",
       "icon": "mdi:truck-fast",
       "shortDesc": "Real-time vehicle visibility, route optimization, and driver analytics.",
-      "description": "Monitor your entire fleet on a single dashboard with live GPS positions, historical trip replays, and automated alerts for speeding or idle time. Our tracking platform scales from small delivery fleets to nationwide logistics networks with custom integrations into ERP and dispatch systems.",
+      "description": "Real-time vehicle tracking, route optimization, and detailed reporting. Monitor every asset live, cut fuel and idle time, and get the records you need for compliance and audits.",
       "category": "tracking"
     },
     {
       "id": 3,
       "slug": "geofencing",
-      "title": "Geofencing",
+      "title": "Geofencing Solutions",
       "icon": "mdi:map-marker-radius",
       "shortDesc": "Location-based triggers for alerts, automation, and compliance.",
-      "description": "Define virtual boundaries around sites, routes, or regions and trigger actions when assets enter or exit. Geofencing powers warehouse arrival notifications, restricted-zone compliance, automated time sheets, and customer proximity alerts — all configurable through an intuitive admin panel.",
+      "description": "Virtual boundary alerts, zone management, and compliance tracking. Draw digital perimeters that trigger instant notifications the moment assets enter, exit, or dwell in a zone.",
       "category": "geofencing"
     },
     {
       "id": 4,
-      "slug": "spatial-analytics",
-      "title": "Spatial Analytics",
-      "icon": "mdi:chart-scatter-plot",
-      "shortDesc": "Turn location data into actionable insights and heatmaps.",
-      "description": "Aggregate and visualize spatial patterns across your operations — density heatmaps, catchment analysis, drive-time isochrones, and trend dashboards. We combine PostGIS, Python, and modern BI tooling to surface insights that static spreadsheets cannot reveal.",
-      "category": "analytics"
-    },
-    {
-      "id": 5,
-      "slug": "custom-map-apis",
-      "title": "Custom Map APIs",
-      "icon": "mdi:api",
-      "shortDesc": "RESTful and tile services for embedding maps in any application.",
-      "description": "Build on our Map API layer to serve vector tiles, geocoding, reverse geocoding, and routing endpoints. Designed for developers who need reliable, low-latency spatial services with authentication, rate limiting, and OpenAPI documentation out of the box.",
+      "slug": "mobile-mapping",
+      "title": "Mobile Mapping",
+      "icon": "mdi:cellphone-check",
+      "shortDesc": "Field data collection apps, drone mapping, and survey integration.",
+      "description": "Field data collection apps, drone mapping, and survey integration. Equip crews to capture accurate geospatial data anywhere — then sync it straight into your central systems.",
       "category": "gis"
     },
     {
+      "id": 5,
+      "slug": "spatial-analytics",
+      "title": "Location Analytics",
+      "icon": "mdi:chart-line",
+      "shortDesc": "Spatial data dashboards, heatmaps, and business intelligence.",
+      "description": "Spatial data dashboards, heatmaps, and business intelligence. Reveal the patterns hidden in your location data and turn them into decisions that move revenue and efficiency.",
+      "category": "analytics"
+    },
+    {
       "id": 6,
-      "slug": "field-data-collection",
-      "title": "Field Data Collection",
-      "icon": "mdi:clipboard-check-outline",
-      "shortDesc": "Mobile-first tools for capturing GPS-tagged surveys and inspections.",
-      "description": "Equip field teams with offline-capable mobile apps that capture coordinates, photos, and structured forms synced to your central database. Ideal for asset inspections, utility surveys, agricultural monitoring, and environmental compliance reporting.",
+      "slug": "custom-development",
+      "title": "Custom Development",
+      "icon": "mdi:code-braces",
+      "shortDesc": "Tailored geospatial software, API integrations, and white-label solutions.",
+      "description": "Tailored geospatial software, API integrations, and white-label solutions. When off-the-shelf won't do, we engineer location platforms built precisely around your workflow.",
       "category": "gis"
     }
   ]

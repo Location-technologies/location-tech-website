@@ -32,7 +32,7 @@ const barHeights = ['38%', '60%', '48%', '78%', '66%', '92%', '74%', '100%']
         :visible-once="true"
         class="min-w-0"
       >
-        <span class="font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
+        <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
           Why Choose Us
         </span>
 

@@ -1,8 +1,22 @@
 <template>
-  <div class="mx-auto max-w-6xl space-y-6 px-6 py-10">
-    <h1 class="font-syne text-3xl font-bold text-brand-dark">About</h1>
+  <div class="overflow-x-hidden">
+    <BasePageHero
+      breadcrumb="About"
+      heading-light="About "
+      heading-gradient="Us"
+      subtitle="The story behind Pakistan's precision location experts."
+    />
     <AboutStory />
+    <AboutMissionVision />
     <AboutValues />
     <AboutTeam />
+    <HomeCta />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About Us — Location Technologies',
+  description: 'Learn about Location Technologies — Pakistan\'s precision location experts delivering GIS, GPS tracking, and geofencing solutions.',
+})
+</script>

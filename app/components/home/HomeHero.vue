@@ -32,7 +32,7 @@ const trustStats = [
           :enter="{ opacity: 1, x: 0, transition: { duration: 700, delay: 100 } }"
           class="w-full min-w-0 max-w-[620px]"
         >
-          <span class="font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
+          <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
             Pakistan's Leading Location Tech Company
           </span>
 
