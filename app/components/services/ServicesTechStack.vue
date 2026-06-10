@@ -25,9 +25,6 @@ const technologies: Technology[] = [
   { name: 'PostgreSQL', icon: 'simple-icons:postgresql', color: '#4169E1' },
   { name: 'PostGIS', icon: 'mdi:database-marker', color: '#336791' },
 ]
-
-const rowOne = technologies.slice(0, 9)
-const rowTwo = technologies.slice(9)
 </script>
 
 <template>
@@ -53,69 +50,34 @@ const rowTwo = technologies.slice(9)
       </BaseSectionHeader>
     </div>
 
-    <div class="relative space-y-5">
-      <!-- Row 1 — scrolls left -->
-      <div class="marquee-viewport group/row" aria-label="Technologies we use">
-        <div class="marquee-fade marquee-fade--left" aria-hidden="true" />
-        <div class="marquee-fade marquee-fade--right" aria-hidden="true" />
+    <div class="marquee-viewport group/row" aria-label="Technologies we use">
+      <div class="marquee-fade marquee-fade--left" aria-hidden="true" />
+      <div class="marquee-fade marquee-fade--right" aria-hidden="true" />
 
-        <div class="marquee-track marquee-track--left">
-          <ul
-            v-for="copy in 2"
-            :key="`r1-${copy}`"
-            class="marquee-row flex shrink-0 items-stretch gap-5 pl-5"
-            :aria-hidden="copy === 2"
+      <div class="marquee-track marquee-track--left">
+        <ul
+          v-for="copy in 2"
+          :key="`marquee-${copy}`"
+          class="marquee-row flex shrink-0 items-stretch gap-5 pl-5"
+          :aria-hidden="copy === 2"
+        >
+          <li
+            v-for="tech in technologies"
+            :key="`marquee-${copy}-${tech.name}`"
+            class="marquee-card group/card"
+            :style="{ '--accent': tech.color }"
           >
-            <li
-              v-for="tech in rowOne"
-              :key="`r1-${copy}-${tech.name}`"
-              class="marquee-card group/card"
-              :style="{ '--accent': tech.color }"
-            >
-              <Icon
-                :name="tech.icon"
-                mode="svg"
-                size="80"
-                class="tech-icon"
-                :style="{ color: tech.color }"
-              />
-              <span class="card-label">{{ tech.name }}</span>
-              <span class="card-glow" aria-hidden="true" />
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Row 2 — scrolls right -->
-      <div class="marquee-viewport group/row" aria-hidden="true">
-        <div class="marquee-fade marquee-fade--left" aria-hidden="true" />
-        <div class="marquee-fade marquee-fade--right" aria-hidden="true" />
-
-        <div class="marquee-track marquee-track--right">
-          <ul
-            v-for="copy in 2"
-            :key="`r2-${copy}`"
-            class="marquee-row flex shrink-0 items-stretch gap-5 pl-5"
-            :aria-hidden="copy === 2"
-          >
-            <li
-              v-for="tech in rowTwo"
-              :key="`r2-${copy}-${tech.name}`"
-              class="marquee-card group/card"
-              :style="{ '--accent': tech.color }"
-            >
-              <Icon
-                :name="tech.icon"
-                mode="svg"
-                size="80"
-                class="tech-icon"
-                :style="{ color: tech.color }"
-              />
-              <span class="card-label">{{ tech.name }}</span>
-              <span class="card-glow" aria-hidden="true" />
-            </li>
-          </ul>
-        </div>
+            <Icon
+              :name="tech.icon"
+              mode="svg"
+              size="80"
+              class="tech-icon"
+              :style="{ color: tech.color }"
+            />
+            <span class="card-label">{{ tech.name }}</span>
+            <span class="card-glow" aria-hidden="true" />
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -155,10 +117,6 @@ const rowTwo = technologies.slice(9)
 
 .marquee-track--left {
   animation: marquee-left 45s linear infinite;
-}
-
-.marquee-track--right {
-  animation: marquee-right 52s linear infinite;
 }
 
 .marquee-viewport:hover .marquee-track {
@@ -286,14 +244,8 @@ const rowTwo = technologies.slice(9)
   to { transform: translateX(-50%); }
 }
 
-@keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track--left,
-  .marquee-track--right {
+  .marquee-track--left {
     animation: none;
     flex-wrap: wrap;
     justify-content: center;
@@ -317,10 +269,6 @@ const rowTwo = technologies.slice(9)
 
   .marquee-fade {
     display: none;
-  }
-
-  .marquee-viewport[aria-hidden='true'] {
-    display: block;
   }
 }
 </style>
