@@ -1,27 +1,27 @@
 <script setup lang="ts">
 const milestones = [
   {
-    year: '2019',
+    year: '2023',
     title: 'Founded',
-    description: 'Established in Rawalpindi with a focus on GIS and mapping for local enterprises.',
-    alt: false,
-  },
-  {
-    year: '2020',
-    title: 'First Major Contract',
-    description: 'Delivered a fleet-wide GPS tracking deployment for a national logistics operator.',
-    alt: true,
-  },
-  {
-    year: '2022',
-    title: 'Expanded to GCC',
-    description: 'Opened cross-border projects across the Gulf, bringing geofencing to new markets.',
+    description: 'Location Technologies was established on 14 November 2023, starting with GIS, web mapping, and full-stack development for regional clients.',
     alt: false,
   },
   {
     year: '2024',
-    title: '50+ Projects',
-    description: 'Crossed fifty delivered projects across more than ten industries.',
+    title: 'First Deliveries',
+    description: 'Delivered our first set of client projects — SaaS platforms, mapping tools, and web applications — building a strong reputation for quality and precision.',
+    alt: true,
+  },
+  {
+    year: '2024',
+    title: 'Expanded Services',
+    description: 'Grew offerings to include legacy system modernization, AI-driven systems, WordPress/Shopify development, and DevOps infrastructure.',
+    alt: false,
+  },
+  {
+    year: '2025',
+    title: 'Growing Portfolio',
+    description: 'Active delivery across SaaS, GIS, e-commerce, real estate, and travel verticals. Building a growing client base in Pakistan and internationally.',
     alt: true,
   },
 ]
@@ -48,16 +48,22 @@ const { el: timelineEl, isVisible: timelineVisible } = useScrollReveal()
             Our Story
           </h2>
           <p class="mt-7 text-[16.5px] leading-[1.75] text-[#94A6BE]">
-            Location Technologies was founded with a single mission — to bring <strong class="font-semibold text-[#DCE7F2]">enterprise-grade geospatial intelligence</strong> to Pakistani businesses. From Rawalpindi to the Gulf, our solutions have mapped, tracked, and connected industries.
+            Location Technologies was founded on <strong class="font-semibold text-[#DCE7F2]">14 November 2023</strong> with
+            one mission — to build high-quality, scalable software for businesses that demand precision and reliability.
           </p>
           <p class="mt-[18px] text-[16.5px] leading-[1.75] text-[#94A6BE]">
-            What began as a small team of surveyors and software engineers has grown into a full-service location technology partner, trusted by logistics fleets, public-sector agencies, and enterprises that depend on knowing exactly where things are — in real time.
+            We are a full-service software development company covering SaaS and PaaS platforms, geographic information
+            systems, legacy system modernization, AI-driven applications, WordPress and Shopify websites, and DevOps
+            infrastructure — all under one roof.
           </p>
           <p class="mt-[18px] text-[16.5px] leading-[1.75] text-[#94A6BE]">
-            We build the systems that turn raw coordinates into confident decisions: spatial databases, live tracking dashboards, and automated geofencing that works reliably across challenging terrain and infrastructure.
+            In a short time, we have delivered projects across diverse domains — sports SaaS platforms, travel planning apps,
+            real estate marketing systems, interactive map builders, and e-commerce platforms — always with a commitment
+            to clean code and production-ready results.
           </p>
           <p class="mt-[18px] text-[16.5px] leading-[1.75] text-[#94A6BE]">
-            Today, our work spans more than ten industries and a growing footprint across the GCC — but our principle hasn't changed: precision you can build on.
+            Today we are actively expanding our portfolio and client base within Pakistan and internationally, with a team
+            that brings deep technical expertise and a strong understanding of real-world business requirements.
           </p>
         </div>
 
@@ -74,7 +80,7 @@ const { el: timelineEl, isVisible: timelineVisible } = useScrollReveal()
           />
           <div
             v-for="(milestone, index) in milestones"
-            :key="milestone.year"
+            :key="`${milestone.year}-${milestone.title}`"
             class="relative pb-[38px] last:pb-0"
           >
             <div

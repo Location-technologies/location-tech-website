@@ -3,9 +3,9 @@ const statsSection = ref<HTMLElement | null>(null)
 const hasAnimated = ref(false)
 
 const stats = [
-  { label: 'Projects Delivered', target: 50, suffix: '+' },
-  { label: 'Industries Served', target: 10, suffix: '+' },
-  { label: 'Years Experience', target: 5, suffix: '+' },
+  { label: 'Projects Delivered', target: 6, suffix: '+' },
+  { label: 'Industries Served', target: 6, suffix: '+' },
+  { label: 'Years Experience', target: 2, suffix: '+' },
   { label: 'Client Satisfaction', target: 100, suffix: '%' },
 ]
 

@@ -47,16 +47,16 @@ const values = [
           :initial="{ opacity: 0, y: 20 }"
           :visible="{ opacity: 1, y: 0, transition: { duration: 600, delay: Math.min(index * 100, 400) } }"
           :visible-once="true"
-          class="group relative overflow-hidden rounded-[18px] border border-[#e2eef0] bg-white p-[34px_28px] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_26px_50px_-26px_rgba(0,150,180,0.45)] before:pointer-events-none before:absolute before:inset-0 before:rounded-[18px] before:p-[1.5px] before:bg-gradient-to-br before:from-brand-cyan before:to-brand-green before:opacity-0 before:[mask-composite:exclude] before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] hover:before:opacity-100 max-[560px]:col-span-1"
+          class="value-card group relative overflow-hidden rounded-[18px] border border-[#e2eef0] bg-white p-[34px_28px] transition-all duration-300 hover:-translate-y-2 hover:border-transparent hover:bg-gradient-to-br hover:from-brand-cyan hover:to-brand-green hover:shadow-[0_26px_50px_-26px_rgba(0,150,180,0.45)] max-[560px]:col-span-1"
         >
-          <span class="absolute top-6 right-[26px] font-syne text-[15px] font-extrabold text-[#cfe7ec]">{{ value.num }}</span>
-          <div class="mb-[22px] flex h-[58px] w-[58px] items-center justify-center rounded-[15px] bg-gradient-to-br from-brand-cyan/12 to-brand-green/12">
-            <Icon :name="value.icon" class="h-[30px] w-[30px] text-[#0096b4]" />
+          <span class="value-num absolute top-6 right-[26px] font-syne text-[15px] font-extrabold text-[#b0cdd4] transition-colors duration-300">{{ value.num }}</span>
+          <div class="value-icon mb-[22px] flex h-[58px] w-[58px] items-center justify-center rounded-[15px] bg-gradient-to-br from-brand-cyan/12 to-brand-green/12 transition-colors duration-300">
+            <Icon :name="value.icon" class="value-icon-glyph h-[30px] w-[30px] text-[#0096b4] transition-colors duration-300" />
           </div>
-          <h3 class="mb-2 font-syne text-[21px] font-bold text-brand-dark">
+          <h3 class="value-title mb-2 font-syne text-[21px] font-bold text-brand-dark transition-colors duration-300">
             {{ value.title }}
           </h3>
-          <p class="text-[14.5px] leading-[1.55] text-[#5b6b7e]">
+          <p class="value-desc text-[14.5px] leading-[1.55] text-[#5b6b7e] transition-colors duration-300">
             {{ value.description }}
           </p>
         </div>
@@ -64,3 +64,25 @@ const values = [
     </div>
   </section>
 </template>
+
+<style scoped>
+.value-card:hover .value-num {
+  color: rgb(255 255 255 / 0.4) !important;
+}
+
+.value-card:hover .value-icon {
+  background: rgb(255 255 255 / 0.15) !important;
+}
+
+.value-card:hover :deep(.value-icon-glyph) {
+  color: #fff !important;
+}
+
+.value-card:hover .value-title {
+  color: #fff !important;
+}
+
+.value-card:hover .value-desc {
+  color: rgb(255 255 255 / 0.9) !important;
+}
+</style>

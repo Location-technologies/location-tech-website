@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const trustStats = [
-  { value: '50+', label: 'Projects delivered' },
-  { value: '10+', label: 'Industries served' },
-  { value: '5+', label: 'Years of expertise' },
+  { value: '6+', label: 'Projects delivered' },
+  { value: '6+', label: 'Industries served' },
+  { value: '2+', label: 'Years of expertise' },
 ]
 </script>
 
