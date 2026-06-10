@@ -8,18 +8,16 @@ const navLinks = [
 ]
 
 const services = [
-  { label: 'GIS & Web Mapping', to: '/services' },
+  { label: 'Geographic & Web Mapping', to: '/services' },
   { label: 'SaaS & PaaS Development', to: '/services' },
-  { label: 'Legacy Modernization', to: '/services' },
+  { label: 'Legacy System Modernization', to: '/services' },
   { label: 'AI-Driven Systems', to: '/services' },
   { label: 'WordPress & Shopify', to: '/services' },
   { label: 'DevOps Infrastructure', to: '/services' },
 ]
 
 const socials = [
-  { icon: 'mdi:linkedin', href: '#', label: 'LinkedIn' },
-  { icon: 'mdi:twitter', href: '#', label: 'Twitter' },
-  { icon: 'mdi:facebook', href: '#', label: 'Facebook' },
+  { icon: 'mdi:linkedin', href: 'https://www.linkedin.com/company/locationtechnologies/', label: 'LinkedIn' },
 ]
 
 const year = new Date().getFullYear()
@@ -49,6 +47,8 @@ const year = new Date().getFullYear()
               v-for="social in socials"
               :key="social.icon"
               :href="social.href"
+              target="_blank"
+              rel="noopener noreferrer"
               :aria-label="social.label"
               class="group flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[11px] border border-white/10 bg-white/[0.04] transition-all duration-250 hover:-translate-y-0.5 hover:border-transparent hover:gradient-bg"
             >
@@ -102,19 +102,19 @@ const year = new Date().getFullYear()
           <ul class="flex flex-col gap-3 min-[400px]:gap-[13px] min-[981px]:max-w-none">
             <li class="flex items-start gap-3 text-sm leading-normal text-[#94A6BE] min-[400px]:text-[15px]">
               <Icon name="mdi:email-outline" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-brand-cyan" />
-              <a href="mailto:hello@loctech.pk" class="break-all transition-colors hover:text-brand-cyan min-[981px]:break-normal">
-                hello@loctech.pk
+              <a href="mailto:info@locationtechnologies.io" class="break-all transition-colors hover:text-brand-cyan min-[981px]:break-normal">
+                info@locationtechnologies.io
               </a>
             </li>
             <li class="flex items-start gap-3 text-sm leading-normal text-[#94A6BE] min-[400px]:text-[15px]">
               <Icon name="mdi:phone-outline" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-brand-cyan" />
-              <a href="tel:+92510000000" class="transition-colors hover:text-brand-cyan">
-                +92 51 000 0000
+              <a href="tel:+923348706354" class="transition-colors hover:text-brand-cyan">
+                +92 334 8706354
               </a>
             </li>
             <li class="flex items-start gap-3 text-sm leading-normal text-[#94A6BE] min-[400px]:text-[15px]">
               <Icon name="mdi:map-marker-outline" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-brand-cyan" />
-              <span>Rawalpindi, Pakistan</span>
+              <span>Chakwal, Pakistan</span>
             </li>
           </ul>
         </div>

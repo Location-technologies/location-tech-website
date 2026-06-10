@@ -3,20 +3,20 @@ const cards = [
   {
     icon: 'mdi:map-marker-outline',
     title: 'Office Address',
-    content: 'Rawalpindi, Punjab,<br />Pakistan',
+    content: 'Chakwal,<br />Pakistan',
     href: null,
   },
   {
     icon: 'mdi:email-outline',
     title: 'Email Us',
-    content: 'info@locationtech.pk',
-    href: 'mailto:info@locationtech.pk',
+    content: 'info@locationtechnologies.io',
+    href: 'mailto:info@locationtechnologies.io',
   },
   {
     icon: 'mdi:phone-outline',
     title: 'Call Us',
-    content: '+92 XXX XXXXXXX',
-    href: 'tel:+92000000000',
+    content: '+92 334 8706354',
+    href: 'tel:+923348706354',
   },
 ]
 </script>

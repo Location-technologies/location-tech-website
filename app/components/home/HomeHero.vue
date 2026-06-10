@@ -33,7 +33,7 @@ const trustStats = [
           class="w-full min-w-0 max-w-[620px]"
         >
           <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
-            Pakistan's Leading Location Tech Company
+            Software Engineering & Location Technology
           </span>
 
           <h1 class="mt-4 mb-5 font-syne text-[clamp(2rem,8vw,4.75rem)] font-extrabold leading-[1.05] text-white min-[400px]:mt-[22px] min-[400px]:mb-6 min-[400px]:leading-[1.02]">
@@ -42,7 +42,7 @@ const trustStats = [
           </h1>
 
           <p class="max-w-[540px] text-base leading-relaxed text-[#94A6BE] min-[400px]:text-[clamp(17px,1.4vw,20px)]">
-            Precision GIS solutions, real-time GPS tracking, and intelligent geofencing for modern enterprises.
+            Full-stack SaaS development, geographic systems, AI-driven applications, and DevOps infrastructure — engineered for precision at scale.
           </p>
 
           <div class="mt-8 flex flex-col gap-3 min-[400px]:mt-[38px] min-[400px]:flex-row min-[400px]:flex-wrap min-[400px]:gap-4">
