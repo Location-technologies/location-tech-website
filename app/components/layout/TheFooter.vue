@@ -8,11 +8,12 @@ const navLinks = [
 ]
 
 const services = [
-  { label: 'GIS & Mapping', to: '/services' },
-  { label: 'GPS Tracking', to: '/services' },
-  { label: 'Geofencing', to: '/services' },
-  { label: 'Spatial Analytics', to: '/services' },
-  { label: 'Fleet Management', to: '/services' },
+  { label: 'GIS & Web Mapping', to: '/services' },
+  { label: 'SaaS & PaaS Development', to: '/services' },
+  { label: 'Legacy Modernization', to: '/services' },
+  { label: 'AI-Driven Systems', to: '/services' },
+  { label: 'WordPress & Shopify', to: '/services' },
+  { label: 'DevOps Infrastructure', to: '/services' },
 ]
 
 const socials = [
@@ -41,7 +42,7 @@ const year = new Date().getFullYear()
             <AppLogo />
           </NuxtLink>
           <p class="max-w-md text-sm leading-relaxed text-[#94A6BE] min-[400px]:max-w-[300px] min-[400px]:text-[15px]">
-            Precision GIS, GPS tracking, and geofencing solutions engineered for modern enterprises across Pakistan.
+            Full-stack software — GIS, SaaS, AI, e-commerce, and cloud infrastructure — engineered for enterprises across Pakistan.
           </p>
           <div class="mt-5 flex gap-3 min-[400px]:mt-6">
             <a

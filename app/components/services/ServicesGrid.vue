@@ -17,10 +17,10 @@ function isTintedDesktop(index: number) {
       <BaseSectionHeader
         centered
         eyebrow="What We Offer"
-        subtitle="From spatial data and live tracking to custom platforms — everything you need to map, track, and connect, under one roof."
+        subtitle="From GIS and SaaS platforms to AI, e-commerce, and cloud infrastructure — full-stack software under one roof."
         class="mx-auto mb-[60px] max-w-[660px] [&_h2]:inline-block [&_p]:text-[#5b6b7e]"
       >
-        Full-Spectrum Location Tech<span class="underline-grad" />
+        Full-Stack Software Services<span class="underline-grad" />
       </BaseSectionHeader>
 
       <div class="grid gap-[26px] md:grid-cols-2">

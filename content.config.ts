@@ -7,7 +7,7 @@ const serviceSchema = z.object({
   icon: z.string(),
   shortDesc: z.string(),
   description: z.string(),
-  category: z.enum(['gis', 'tracking', 'geofencing', 'analytics']),
+  category: z.enum(['mapping', 'saas', 'modernization', 'ai', 'ecommerce', 'devops']),
 })
 
 const projectSchema = z.object({
