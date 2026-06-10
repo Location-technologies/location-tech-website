@@ -17,6 +17,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About Us — Location Technologies',
-  description: 'Learn about Location Technologies — Pakistan\'s precision location experts delivering GIS, GPS tracking, and geofencing solutions.',
+  description: 'Learn about Location Technologies — Pakistan\'s precision location experts delivering GIS, GPS tracking, and geofencing solutions. Meet our leadership and engineering team.',
 })
 </script>

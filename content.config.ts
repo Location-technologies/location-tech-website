@@ -24,6 +24,17 @@ const projectSchema = z.object({
   featured: z.boolean(),
 })
 
+const teamMemberSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  role: z.string(),
+  tier: z.enum(['directors', 'management', 'team-lead', 'developers']),
+  order: z.number(),
+  bio: z.string().optional(),
+  photo: z.string().optional(),
+  linkedin: z.string().url().optional(),
+})
+
 export default defineContentConfig({
   collections: {
     services: defineCollection({
@@ -35,6 +46,11 @@ export default defineContentConfig({
       type: 'data',
       source: 'portfolio.json',
       schema: z.object({ projects: z.array(projectSchema) }),
+    }),
+    team: defineCollection({
+      type: 'data',
+      source: 'team.json',
+      schema: z.object({ members: z.array(teamMemberSchema) }),
     }),
   },
 })

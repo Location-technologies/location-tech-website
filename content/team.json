@@ -1,0 +1,66 @@
+{
+  "members": [
+    {
+      "id": "abdul-khaliq",
+      "name": "Abdul Khaliq",
+      "role": "Director",
+      "tier": "directors",
+      "order": 1,
+      "bio": "Sets strategic direction for Location Technologies' GIS and software delivery."
+    },
+    {
+      "id": "muhammad-nabeel-mubashir",
+      "name": "Muhammad Nabeel Mubashir",
+      "role": "Director",
+      "tier": "directors",
+      "order": 2,
+      "bio": "Sets strategic direction for Location Technologies' GIS and software delivery.",
+      "linkedin": "https://www.linkedin.com/in/mnabeelm/"
+    },
+    {
+      "id": "muhammad-yasir-ali-khan",
+      "name": "Muhammad Yasir Ali Khan",
+      "role": "Director",
+      "tier": "directors",
+      "order": 3,
+      "bio": "Sets strategic direction for Location Technologies' GIS and software delivery.",
+      "linkedin": "https://www.linkedin.com/in/muhammad-yasir-ali-khan-b4a801137/"
+    },
+    {
+      "id": "muhammad-adeel",
+      "name": "Muhammad Adeel",
+      "role": "Project Manager",
+      "tier": "management",
+      "order": 1,
+      "bio": "Coordinates projects, timelines, and client communication across the engineering team.",
+      "photo": "assets/images/Remove background project.png",
+      "linkedin": "https://www.linkedin.com/in/m-adeel-/"
+    },
+    {
+      "id": "muhammad-zain-ul-abideen",
+      "name": "Muhammad Zain ul Abideen",
+      "role": "Team Lead",
+      "tier": "team-lead",
+      "order": 1,
+      "bio": "Leads day-to-day engineering execution and code quality standards.",
+      "linkedin": "https://www.linkedin.com/in/m-zain-ul-abideen7378/"
+    },
+    {
+      "id": "abdul-ahad-khan",
+      "name": "Abdul Ahad Khan",
+      "role": "Developer",
+      "tier": "developers",
+      "order": 1,
+      "bio": "Builds and maintains the platforms powering our location-tech solutions.",
+      "linkedin": "https://www.linkedin.com/in/abdul-ahad-khan-54343824b/"
+    },
+    {
+      "id": "usman-malik",
+      "name": "Usman Malik",
+      "role": "Developer",
+      "tier": "developers",
+      "order": 2,
+      "bio": "Builds and maintains the platforms powering our location-tech solutions."
+    }
+  ]
+}
