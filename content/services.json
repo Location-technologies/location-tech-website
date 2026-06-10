@@ -3,56 +3,56 @@
     {
       "id": 1,
       "slug": "gis-mapping",
-      "title": "GIS & Mapping",
+      "title": "Geographic & Web Mapping",
       "icon": "mdi:map",
-      "shortDesc": "Interactive maps and spatial data platforms tailored to your operations.",
-      "description": "Custom GIS solutions, spatial data analysis, and map digitization. We build the geographic systems that turn complex datasets into clear, interactive maps your teams can act on.",
-      "category": "gis"
+      "shortDesc": "Custom GIS platforms, spatial databases, and interactive web maps.",
+      "description": "We design and build GIS platforms, spatial databases, and interactive web maps tailored to your operations. From QGIS and ArcGIS workflows to PostGIS-backed web applications — we bring location data to life for enterprises, public-sector agencies, and field teams who depend on accurate spatial intelligence.",
+      "category": "mapping"
     },
     {
       "id": 2,
-      "slug": "gps-fleet-tracking",
-      "title": "GPS Fleet Tracking",
-      "icon": "mdi:truck-fast",
-      "shortDesc": "Real-time vehicle visibility, route optimization, and driver analytics.",
-      "description": "Real-time vehicle tracking, route optimization, and detailed reporting. Monitor every asset live, cut fuel and idle time, and get the records you need for compliance and audits.",
-      "category": "tracking"
+      "slug": "saas-paas",
+      "title": "SaaS & PaaS Development",
+      "icon": "mdi:cloud-braces",
+      "shortDesc": "Scalable multi-tenant SaaS and PaaS platforms built to grow with you.",
+      "description": "We architect and build SaaS and PaaS platforms with multi-tenant support, subscription billing, and cloud-native deployment. From MVP to enterprise scale — using Vue/Nuxt, React, Node.js, and PostgreSQL — so your product grows without a costly re-architecture.",
+      "category": "saas"
     },
     {
       "id": 3,
-      "slug": "geofencing",
-      "title": "Geofencing Solutions",
-      "icon": "mdi:map-marker-radius",
-      "shortDesc": "Location-based triggers for alerts, automation, and compliance.",
-      "description": "Virtual boundary alerts, zone management, and compliance tracking. Draw digital perimeters that trigger instant notifications the moment assets enter, exit, or dwell in a zone.",
-      "category": "geofencing"
+      "slug": "legacy-modernization",
+      "title": "Legacy System Modernization",
+      "icon": "mdi:layers-triple",
+      "shortDesc": "Migrate monoliths to microservices, module federation, and modern stacks.",
+      "description": "We migrate legacy monoliths to modern architectures — microservices, module federation, and event-driven systems. Preserve your existing data and business logic while gaining the speed, resilience, and maintainability teams need to ship faster.",
+      "category": "modernization"
     },
     {
       "id": 4,
-      "slug": "mobile-mapping",
-      "title": "Mobile Mapping",
-      "icon": "mdi:cellphone-check",
-      "shortDesc": "Field data collection apps, drone mapping, and survey integration.",
-      "description": "Field data collection apps, drone mapping, and survey integration. Equip crews to capture accurate geospatial data anywhere — then sync it straight into your central systems.",
-      "category": "gis"
+      "slug": "ai-systems",
+      "title": "AI-Driven Systems",
+      "icon": "mdi:robot-outline",
+      "shortDesc": "Intelligent web and desktop apps powered by AI and machine learning.",
+      "description": "We integrate AI and machine learning into web and desktop applications — intelligent search, recommendation engines, document processing pipelines, and LLM-powered automation. Build software that learns, adapts, and delivers measurable efficiency gains for your team.",
+      "category": "ai"
     },
     {
       "id": 5,
-      "slug": "spatial-analytics",
-      "title": "Location Analytics",
-      "icon": "mdi:chart-line",
-      "shortDesc": "Spatial data dashboards, heatmaps, and business intelligence.",
-      "description": "Spatial data dashboards, heatmaps, and business intelligence. Reveal the patterns hidden in your location data and turn them into decisions that move revenue and efficiency.",
-      "category": "analytics"
+      "slug": "wordpress-shopify",
+      "title": "WordPress & Shopify",
+      "icon": "mdi:storefront-outline",
+      "shortDesc": "Custom themes, plugins, and e-commerce on WordPress and Shopify.",
+      "description": "We build custom WordPress websites and Shopify stores tailored to your brand and business flow. From theme development and plugin customization to complete e-commerce setups — payment integrations, product management, and conversion-optimized storefronts that drive sales.",
+      "category": "ecommerce"
     },
     {
       "id": 6,
-      "slug": "custom-development",
-      "title": "Custom Development",
-      "icon": "mdi:code-braces",
-      "shortDesc": "Tailored geospatial software, API integrations, and white-label solutions.",
-      "description": "Tailored geospatial software, API integrations, and white-label solutions. When off-the-shelf won't do, we engineer location platforms built precisely around your workflow.",
-      "category": "gis"
+      "slug": "devops",
+      "title": "DevOps Infrastructure",
+      "icon": "mdi:server-network",
+      "shortDesc": "Cloud infrastructure, CI/CD pipelines, and auto-scaling deployment.",
+      "description": "We design and manage cloud infrastructure, CI/CD pipelines, Docker and Kubernetes containerization, and auto-scaling deployment strategies. Build the operational backbone that keeps your software reliable, observable, and cost-efficient at any scale.",
+      "category": "devops"
     }
   ]
 }

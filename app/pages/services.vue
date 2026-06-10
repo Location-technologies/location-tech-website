@@ -4,13 +4,13 @@
       breadcrumb="Services"
       heading-light="Our "
       heading-gradient="Services"
-      subtitle="End-to-end geospatial and location technology solutions."
+      subtitle="From GIS platforms and SaaS products to AI systems and cloud infrastructure — full-stack software built to scale."
     />
     <ServicesGrid />
     <ServicesProcess />
     <ServicesTechStack />
     <HomeCta
-      subtitle="Tell us what you need to map, track, or connect — and we'll scope the right solution."
+      subtitle="Tell us what you're building — and we'll scope the right solution."
     />
   </div>
 </template>
@@ -18,6 +18,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Our Services — Location Technologies',
-  description: 'GIS mapping, GPS fleet tracking, geofencing, and location analytics solutions tailored for modern enterprises.',
+  description: 'GIS mapping, SaaS platforms, legacy modernization, AI systems, e-commerce, and DevOps — built for modern enterprises.',
 })
 </script>

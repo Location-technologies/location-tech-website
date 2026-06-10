@@ -14,7 +14,7 @@ const services = computed(() => data.value?.services?.slice(0, 3) ?? [])
     <div class="mx-auto max-w-[1240px] px-4 min-[400px]:px-5 sm:px-8">
       <BaseSectionHeader
         centered
-        subtitle="End-to-end location intelligence — from spatial data and mapping to live tracking and automated geofencing."
+        subtitle="From GIS and SaaS platforms to modernization and cloud infrastructure — software built to scale with your business."
         class="text-white [&_h2]:text-white [&_h2]:text-[clamp(2.125rem,4vw,3rem)] [&_h2]:font-extrabold [&_p]:text-[#94A6BE]"
       >
         What We Do<span class="underline-grad" />
