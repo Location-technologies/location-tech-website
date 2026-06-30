@@ -8,9 +8,10 @@
     />
     <PortfolioGrid />
     <PortfolioCaseStudy />
+    <PortfolioProjectDialog />
     <HomeCta
       title="Have a project in mind?"
-      subtitle="From a single map to a city-wide tracking platform — let's scope what you need to build."
+      subtitle="From SaaS platforms to geospatial tools — let's scope what you need to build."
       button-text="Let's Talk"
     />
   </div>
@@ -19,6 +20,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Our Work — Location Technologies',
-  description: 'Explore our portfolio of GIS, fleet tracking, geofencing, and location analytics projects across Pakistan.',
+  description: 'Explore our portfolio of SaaS platforms, geospatial tools, and full-stack applications built by Location Technologies.',
 })
 </script>

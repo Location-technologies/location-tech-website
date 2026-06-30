@@ -7,11 +7,43 @@
       "client": "CricketMania",
       "category": "saas",
       "thumbnail": "/images/portfolio/cricketmania.jpg",
-      "shortDesc": "Full-stack SaaS sports management platform built with TypeScript.",
-      "description": "Built a full-stack sports management platform with a React frontend, Node.js backend, and a unified app shell. Covers tournament management, live scoreboards, player statistics, and team administration dashboards.",
-      "technologies": ["TypeScript", "React", "Node.js", "PostgreSQL"],
+      "shortDesc": "Full-stack cricket venue booking platform — web, NestJS API, and React Native app with OTP auth and real-time slot locking.",
+      "description": "CricketMania connects cricket players with bookable venues and gives venue owners a complete digital operations hub. Players browse venues by city, compare pitch availability and hourly rates, and book time slots. Owners onboard venues with multiple pitches, set day-specific operating hours, manage image galleries, and handle bookings through a secure role-based system.\n\nThe platform spans three deliverables: a Next.js 16 web frontend (App Router, React 19, Tailwind CSS v4), a production NestJS backend with PostgreSQL/Prisma (booking engine, S3 media, Twilio OTP, JWT RBAC), and a React Native Expo mobile app with glassmorphic UI for both Player and Owner roles.\n\nThe backend implements concurrent slot locking, booking lifecycle states (PENDING → CONFIRMED → COMPLETED), pricing snapshots, guest bookings, and owner-scoped venue management. The mobile app delivers venue discovery feeds, owner dashboards, gallery upload/reorder, and secure token storage via Expo Secure Store.",
+      "technologies": ["TypeScript", "Next.js", "React", "NestJS", "PostgreSQL", "Prisma", "React Native", "Expo", "AWS S3", "Twilio", "JWT"],
       "year": 2025,
-      "featured": true
+      "featured": true,
+      "published": true,
+      "status": "in-progress",
+      "highlights": [
+        "Concurrent booking engine with slot locking to prevent double-booking",
+        "Multi-pitch venues with per-day operating hours",
+        "Dual-role RBAC: Player vs Venue Owner with ownership verification",
+        "Twilio OTP authentication and JWT sessions",
+        "S3-backed media gallery with upload, reorder, and batch delete",
+        "React Native app with cinematic animations and owner management flows"
+      ],
+      "deliverables": [
+        {
+          "name": "Web Frontend",
+          "stack": "Next.js 16, React 19, Tailwind CSS v4, TypeScript",
+          "status": "foundation"
+        },
+        {
+          "name": "API Backend",
+          "stack": "NestJS, PostgreSQL, Prisma, AWS S3, Twilio",
+          "status": "shipped"
+        },
+        {
+          "name": "Mobile App",
+          "stack": "React Native, Expo Router, NativeWind, Reanimated",
+          "status": "shipped"
+        }
+      ],
+      "roadmap": [
+        "Live match dashboard (WebSocket scores & commentary)",
+        "Player & team profile pages",
+        "Fantasy league auth and state management"
+      ]
     },
     {
       "id": 2,
@@ -20,11 +52,21 @@
       "client": "Internal Tool",
       "category": "mapping",
       "thumbnail": "/images/portfolio/map-builder.jpg",
-      "shortDesc": "Interactive web-based GIS tool for creating and sharing custom maps.",
-      "description": "Developed a browser-based map builder that allows users to create, style, and export custom maps. Supports layer management, data import (GeoJSON, CSV), and shareable map URLs. Built entirely in JavaScript with a Leaflet-powered canvas.",
-      "technologies": ["JavaScript", "Leaflet", "GeoJSON", "HTML5 Canvas"],
+      "shortDesc": "Enterprise geospatial platform — Mapbox frontend, Django/PostGIS backend, GeoServer automation, and AI-assisted spatial tools.",
+      "description": "Map Builder is a full-stack geospatial application for interactive mapping, dataset management, and spatial analysis. Users upload vector and raster data, visualize layers on high-performance Mapbox GL maps, draw and annotate geometries, and save project workspaces.\n\nThe Django backend processes shapefiles and GeoTIFFs via GDAL/Rasterio, stores geometries in PostGIS, and automatically provisions GeoServer workspaces and WMS/WFS layers. An OpenAI-powered assistant interprets natural-language spatial queries. Stripe handles subscriptions and usage-based billing behind JWT-protected APIs.",
+      "technologies": ["React", "Vite", "Redux Toolkit", "Mapbox GL JS", "Django", "Django REST Framework", "PostgreSQL", "PostGIS", "GeoServer", "GDAL", "AWS S3", "Stripe", "OpenAI"],
       "year": 2025,
-      "featured": true
+      "featured": true,
+      "published": true,
+      "status": "shipped",
+      "highlights": [
+        "End-to-end geospatial ETL pipeline (GDAL, Rasterio → PostGIS)",
+        "Automated GeoServer layer publishing via REST API",
+        "Mapbox GL JS + Draw + Fabric.js for mapping and annotations",
+        "AI spatial assistant (OpenAI / pydantic-ai)",
+        "Stripe subscription and secure JWT access",
+        "Project workspaces with persisted layers, zoom, and drawings"
+      ]
     },
     {
       "id": 3,
@@ -33,11 +75,33 @@
       "client": "Travelista",
       "category": "saas",
       "thumbnail": "/images/portfolio/travelista.jpg",
-      "shortDesc": "Full-stack tour and travel planning platform — web, backend, and mobile.",
-      "description": "Designed and built a complete travel planning platform spanning a React web app, Python/Django REST API backend, and a cross-platform mobile app. Features itinerary builder, trip booking management, destination guides, and real-time travel notifications.",
-      "technologies": ["JavaScript", "Python", "Django", "React", "Mobile"],
+      "shortDesc": "B2B travel agency platform — React dashboard, Django multi-tenant API, and mobile app for packages, groups, bookings, and payments.",
+      "description": "Travelista streamlines travel agency operations: company onboarding, itinerary packaging, group tour administration, customer CRM, booking workflows, and payment reconciliation. The React 19 dashboard uses Redux Toolkit and RTK Query with cookie-based JWT auth, silent token refresh, and a mandatory company setup wizard before dashboard access.\n\nThe Django 5 backend implements multi-tenant company profiles, a hierarchical package engine (countries → cities → accommodations with dynamic pricing JSON), group capacity tracking, customer profiling with agency links, booking status workflows, and offline/gateway payment verification with S3 proof uploads. OpenAPI docs are generated via drf-spectacular.",
+      "technologies": ["React", "Vite", "Redux Toolkit", "Django", "Django REST Framework", "PostgreSQL", "AWS S3", "JWT", "Stripe"],
       "year": 2025,
-      "featured": false
+      "featured": false,
+      "published": true,
+      "status": "shipped",
+      "highlights": [
+        "Multi-tenant B2B company onboarding and verification workflow",
+        "Hierarchical package builder with destinations, accommodations, and galleries",
+        "Group tour capacity management and member assignment",
+        "Booking engine with walk-in vs company-customer source tracking",
+        "Payment ledger: offline proofs, Stripe gateway hooks, status verification",
+        "Protected routes, silent JWT refresh, Redux Persist state"
+      ],
+      "deliverables": [
+        {
+          "name": "Agency Dashboard",
+          "stack": "React 19, Vite, Tailwind CSS 4, RTK Query",
+          "status": "shipped"
+        },
+        {
+          "name": "API Backend",
+          "stack": "Django 5, DRF, PostgreSQL, AWS S3",
+          "status": "shipped"
+        }
+      ]
     },
     {
       "id": 4,
@@ -50,7 +114,8 @@
       "description": "Built a real estate marketing platform with an interactive map interface for property discovery, radius-based filtering, neighborhood insights, and agent lead management. Combines spatial data with modern property listing workflows.",
       "technologies": ["TypeScript", "Vue.js", "PostGIS", "Node.js"],
       "year": 2025,
-      "featured": true
+      "featured": false,
+      "published": false
     },
     {
       "id": 5,
@@ -63,7 +128,8 @@
       "description": "Developed an end-to-end tailoring management system covering customer measurement profiles, online order placement, appointment scheduling, and order status tracking. Designed for small-to-medium tailoring businesses moving operations online.",
       "technologies": ["JavaScript", "Vue.js", "Node.js", "MySQL"],
       "year": 2025,
-      "featured": false
+      "featured": false,
+      "published": false
     },
     {
       "id": 6,
@@ -73,10 +139,12 @@
       "category": "saas",
       "thumbnail": "/images/portfolio/portfolio.jpg",
       "shortDesc": "Company portfolio website built with Nuxt 3, Tailwind CSS v4, and GSAP.",
-      "description": "Designed and built the company's own portfolio website using Nuxt 3, Tailwind CSS v4, @nuxt/content, and GSAP animations. Features scroll-reveal effects, animated stats, filterable portfolio grid, and a fully responsive layout from mobile to desktop.",
+      "description": "Designed and built the company's own portfolio website using Nuxt 3, Tailwind CSS v4, @nuxt/content, and GSAP animations. Features scroll-reveal effects, animated stats, filterable portfolio grid, project detail pages, and a fully responsive layout from mobile to desktop.",
       "technologies": ["Vue.js", "Nuxt 3", "Tailwind CSS", "GSAP"],
       "year": 2025,
-      "featured": false
+      "featured": false,
+      "published": true,
+      "status": "shipped"
     }
   ]
 }

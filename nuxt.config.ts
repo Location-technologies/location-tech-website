@@ -61,6 +61,14 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    prerender: { crawlLinks: true },
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/portfolio/cricketmania',
+        '/portfolio/map-builder',
+        '/portfolio/travelista',
+        '/portfolio/location-tech-portfolio',
+      ],
+    },
   },
 })

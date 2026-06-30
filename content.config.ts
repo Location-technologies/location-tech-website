@@ -10,6 +10,13 @@ const serviceSchema = z.object({
   category: z.enum(['mapping', 'saas', 'modernization', 'ai', 'ecommerce', 'devops']),
 })
 
+const deliverableSchema = z.object({
+  name: z.string(),
+  stack: z.string(),
+  summary: z.string().optional(),
+  status: z.enum(['shipped', 'in-progress', 'foundation']).optional(),
+})
+
 const projectSchema = z.object({
   id: z.number(),
   slug: z.string(),
@@ -22,6 +29,13 @@ const projectSchema = z.object({
   technologies: z.array(z.string()),
   year: z.number(),
   featured: z.boolean(),
+  published: z.boolean().optional(),
+  status: z.enum(['shipped', 'in-progress', 'foundation']).optional(),
+  highlights: z.array(z.string()).optional(),
+  deliverables: z.array(deliverableSchema).optional(),
+  roadmap: z.array(z.string()).optional(),
+  githubUrl: z.string().url().optional(),
+  liveUrl: z.string().url().optional(),
 })
 
 const teamMemberSchema = z.object({
