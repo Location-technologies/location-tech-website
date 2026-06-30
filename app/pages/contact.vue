@@ -4,7 +4,7 @@
       breadcrumb="Contact"
       heading-light="Get in "
       heading-gradient="Touch"
-      subtitle="We're based in Rawalpindi, Pakistan — and we'd love to hear from you."
+      subtitle="We're based in Chakwal, Punjab, Pakistan — and we'd love to hear from you."
     />
     <ContactCards />
     <ContactForm />

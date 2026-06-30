@@ -37,7 +37,7 @@ const year = new Date().getFullYear()
         <!-- Brand -->
         <div class="min-w-0 min-[560px]:col-span-2 min-[981px]:col-span-1">
           <NuxtLink to="/" class="mb-4 inline-block min-[400px]:mb-5">
-            <AppLogo />
+            <AppLogo layout="full" />
           </NuxtLink>
           <p class="max-w-md text-sm leading-relaxed text-[#94A6BE] min-[400px]:max-w-[300px] min-[400px]:text-[15px]">
             Full-stack software — GIS, SaaS, AI, e-commerce, and cloud infrastructure — engineered for enterprises across Pakistan.
@@ -114,7 +114,7 @@ const year = new Date().getFullYear()
             </li>
             <li class="flex items-start gap-3 text-sm leading-normal text-[#94A6BE] min-[400px]:text-[15px]">
               <Icon name="mdi:map-marker-outline" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-brand-cyan" />
-              <span>Chakwal, Pakistan</span>
+              <span>Chakwal, Punjab, Pakistan</span>
             </li>
           </ul>
         </div>

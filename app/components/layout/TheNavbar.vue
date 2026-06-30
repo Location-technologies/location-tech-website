@@ -32,8 +32,8 @@ onUnmounted(() => {
 const headerClasses = computed(() => [
   'fixed top-0 left-0 right-0 z-[100] border-b transition-all duration-[350ms] ease-out',
   scrolled.value
-    ? 'border-brand-cyan/14 bg-brand-dark/78 py-[13px] shadow-[0_12px_40px_-22px_rgba(0,0,0,0.8)] backdrop-blur-[16px] backdrop-saturate-[140%]'
-    : 'border-transparent bg-transparent py-[22px]',
+    ? 'border-brand-cyan/14 bg-brand-dark/78 py-2.5 shadow-[0_12px_40px_-22px_rgba(0,0,0,0.8)] backdrop-blur-[16px] backdrop-saturate-[140%]'
+    : 'border-transparent bg-transparent py-4',
 ])
 
 const navLinkClasses =
@@ -43,8 +43,8 @@ const navLinkClasses =
 <template>
   <header :class="headerClasses">
     <div class="mx-auto flex max-w-[1240px] items-center justify-between gap-3 px-4 min-[400px]:px-5 sm:px-8">
-      <NuxtLink to="/" class="min-w-0 shrink">
-        <AppLogo show-tagline />
+      <NuxtLink to="/" class="shrink-0">
+        <AppLogo layout="full" size="lg" />
       </NuxtLink>
 
       <ul class="hidden min-[981px]:flex items-center gap-[38px]">
