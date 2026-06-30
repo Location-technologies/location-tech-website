@@ -3,7 +3,9 @@ const { data } = await useAsyncData('portfolio-grid', () =>
   queryCollection('portfolio').first(),
 )
 
-const projects = computed(() => data.value?.projects ?? [])
+const projects = computed(() =>
+  (data.value?.projects ?? []).filter(p => p.published !== false),
+)
 
 const categories = [
   { label: 'All', value: 'all' },
@@ -43,6 +45,8 @@ const categoryShort: Record<string, string> = {
   mobile: 'Mobile',
   ecommerce: 'E-Commerce',
 }
+
+const { openProject } = usePortfolioDialog()
 
 const bgGradients: Record<string, string> = {
   saas: 'bg-saas',
@@ -116,13 +120,14 @@ const bgGradients: Record<string, string> = {
               <span class="ttl mt-1 font-syne text-xl font-bold text-white">
                 {{ project.title }}
               </span>
-              <NuxtLink
-                to="/contact"
-                class="view-btn mt-3.5 inline-flex w-fit items-center gap-2 rounded-full gradient-bg px-[18px] py-2.5 font-dm text-sm font-semibold text-[#04121C]"
+              <button
+                type="button"
+                class="view-btn mt-3.5 inline-flex w-fit cursor-pointer items-center gap-2 rounded-full gradient-bg px-[18px] py-2.5 font-dm text-sm font-semibold text-[#04121C]"
+                @click="openProject(project.slug)"
               >
                 View Project
                 <Icon name="mdi:arrow-right" class="h-[15px] w-[15px]" />
-              </NuxtLink>
+              </button>
             </div>
           </div>
 
@@ -136,6 +141,18 @@ const bgGradients: Record<string, string> = {
             <p class="text-[14.5px] leading-[1.55] text-[#94A6BE]">
               {{ project.shortDesc }}
             </p>
+            <div
+              v-if="project.highlights?.length"
+              class="mt-3.5 flex flex-wrap gap-2"
+            >
+              <span
+                v-for="highlight in project.highlights.slice(0, 2)"
+                :key="highlight"
+                class="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] leading-snug text-[#C3D0E0]"
+              >
+                {{ highlight.length > 48 ? `${highlight.slice(0, 45)}…` : highlight }}
+              </span>
+            </div>
           </div>
         </article>
       </div>
