@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { BRAND_LOGOS } from '~/constants/brand'
+
+useHead({
+  link: [{ rel: 'icon', type: 'image/jpeg', href: BRAND_LOGOS.logoWhiteBg }],
+  meta: [{ property: 'og:image', content: BRAND_LOGOS.logoWhiteBg }],
+})
+</script>
+
 <template>
   <NuxtRouteAnnouncer />
   <NuxtLayout>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { BRAND_LOGOS } from '~/constants/brand'
+
 const route = useRoute()
 
 const { data } = await useAsyncData('contact-form-services', () =>
@@ -240,11 +242,15 @@ const { el: whyEl, isVisible: whyVisible } = useScrollReveal()
           <div class="pointer-events-none absolute -right-[30px] -bottom-[30px] h-40 w-40 rounded-full border border-dashed border-brand-cyan/30" aria-hidden="true">
             <div class="absolute inset-[26px] rounded-full border border-dashed border-brand-green/30" />
           </div>
-          <div class="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-[15px] gradient-bg shadow-[0_12px_30px_-10px_rgba(0,180,216,0.6)]">
-            <Icon name="mdi:map-marker" class="h-7 w-7 text-[#04121C]" />
-          </div>
+          <NuxtImg
+            :src="BRAND_LOGOS.logoSidebar"
+            width="56"
+            height="56"
+            alt="Location Technologies"
+            class="relative z-10 h-14 w-14 shrink-0 rounded-[15px] object-contain"
+          />
           <div class="relative z-10">
-            <b class="block font-syne text-lg text-white">Rawalpindi, Pakistan</b>
+            <b class="block font-syne text-lg text-white">Chakwal, Punjab, Pakistan</b>
             <span class="text-[13.5px] text-[#94A6BE]">Serving clients nationwide &amp; across the GCC</span>
           </div>
         </div>

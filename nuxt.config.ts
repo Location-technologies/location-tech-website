@@ -25,6 +25,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
 
+  image: {
+    provider: 'none',
+  },
+
   googleFonts: {
     families: {
       Syne: [400, 600, 700, 800],
@@ -39,7 +43,14 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'GIS, GPS Tracking & Geofencing Solutions' },
         { name: 'theme-color', content: '#0A1628' },
+        { property: 'og:image:alt', content: 'Location Technologies' },
       ],
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      googleMapsApiKey: '',
     },
   },
 

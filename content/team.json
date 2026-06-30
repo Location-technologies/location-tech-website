@@ -60,7 +60,8 @@
       "role": "Developer",
       "tier": "developers",
       "order": 2,
-      "bio": "Builds and maintains the platforms powering our location-tech solutions."
+      "bio": "Builds and maintains the platforms powering our location-tech solutions.",
+      "photo": "assets/images/usman-malik.jpeg"
     }
   ]
 }

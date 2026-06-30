@@ -3,7 +3,7 @@ const cards = [
   {
     icon: 'mdi:map-marker-outline',
     title: 'Office Address',
-    content: 'Chakwal,<br />Pakistan',
+    content: 'Chakwal,<br />Punjab, Pakistan',
     href: null,
   },
   {
