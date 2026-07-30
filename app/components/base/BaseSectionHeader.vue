@@ -29,7 +29,7 @@ const { el, isVisible } = useScrollReveal()
     >
       {{ eyebrow }}
     </span>
-    <h2 class="mt-3.5 inline-block font-syne text-[clamp(2.125rem,4vw,3rem)] font-extrabold text-brand-dark">
+    <h2 class="mt-3.5 inline-block font-syne text-[clamp(1.75rem,5.5vw,3rem)] font-bold tracking-tight text-brand-dark">
       <slot>{{ title }}</slot>
     </h2>
     <p

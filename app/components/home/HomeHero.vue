@@ -32,11 +32,11 @@ const trustStats = [
           :enter="{ opacity: 1, x: 0, transition: { duration: 700, delay: 100 } }"
           class="w-full min-w-0 max-w-[620px]"
         >
-          <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.12em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.18em]">
+          <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.08em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.14em]">
             Software Engineering & Location Technology
           </span>
 
-          <h1 class="mt-4 mb-5 font-syne text-[clamp(2rem,8vw,4.75rem)] font-extrabold leading-[1.05] text-white min-[400px]:mt-[22px] min-[400px]:mb-6 min-[400px]:leading-[1.02]">
+          <h1 class="mt-4 mb-5 font-syne text-[clamp(1.875rem,7.5vw,4.5rem)] font-bold tracking-tight text-white min-[400px]:mt-[22px] min-[400px]:mb-6 min-[400px]:leading-[1.06]">
             We Map. We Track.<br />
             We <span class="gradient-text">Connect.</span>
           </h1>

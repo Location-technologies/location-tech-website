@@ -12,8 +12,9 @@ withDefaults(
 )
 
 const fullLogoClasses: Record<'default' | 'lg', string> = {
-  default: 'h-auto w-[160px] max-w-[55vw] shrink-0 object-contain object-left min-[400px]:w-[200px] min-[400px]:max-w-full sm:w-[220px]',
-  lg: 'h-auto w-[96px] max-w-[38vw] max-h-[48px] shrink-0 object-contain object-left min-[400px]:w-[128px] min-[400px]:max-h-[64px] min-[640px]:w-[155px] min-[640px]:max-h-[80px] min-[981px]:w-[200px] min-[981px]:max-h-[108px]',
+  // Source logos are ~1.26:1 (square-ish). Size by max-height + w-auto so the mark isn't horizontally crushed.
+  default: 'h-auto w-auto max-h-[72px] max-w-[55vw] shrink-0 object-contain object-left min-[400px]:max-h-[88px] sm:max-h-[100px]',
+  lg: 'h-auto w-auto max-h-[52px] max-w-[42vw] shrink-0 object-contain object-left min-[400px]:max-h-[64px] min-[640px]:max-h-[80px] min-[981px]:max-h-[108px] min-[981px]:max-w-[220px]',
 }
 </script>
 
@@ -24,15 +25,17 @@ const fullLogoClasses: Record<'default' | 'lg', string> = {
   >
     <template v-if="layout === 'full'">
       <NuxtImg
-        :src="variant === 'onDark' ? BRAND_LOGOS.logoWhite : BRAND_LOGOS.logoWithoutBg"
-        width="600"
-        height="120"
+        :src="variant === 'onDark' ? BRAND_LOGOS.logoWhiteHeader : BRAND_LOGOS.logoWithoutBg"
+        width="335"
+        height="266"
         :alt="BRAND_ALT"
+        class="!h-auto !w-auto"
         :class="fullLogoClasses[size]"
+        style="aspect-ratio: 3355 / 2660;"
       />
       <small
         v-if="showTagline"
-        class="hidden font-dm text-[10.5px] font-medium uppercase tracking-[0.16em] text-brand-cyan min-[400px]:block"
+        class="hidden font-dm text-[10.5px] font-medium uppercase tracking-[0.12em] text-brand-cyan min-[400px]:block min-[400px]:tracking-[0.16em]"
       >
         Map · Track · Connect
       </small>
@@ -45,11 +48,11 @@ const fullLogoClasses: Record<'default' | 'lg', string> = {
         :alt="BRAND_ALT"
         class="h-[38px] w-[38px] shrink-0 object-contain"
       />
-      <span class="min-w-0 leading-tight font-syne text-[15px] font-extrabold text-white min-[400px]:text-[17px] sm:text-[19px]">
+      <span class="min-w-0 leading-tight font-syne text-[15px] font-extrabold tracking-normal text-white min-[400px]:text-[17px] sm:text-[19px]">
         <span class="block truncate">Location Technologies</span>
         <small
           v-if="showTagline"
-          class="mt-px hidden font-dm text-[10.5px] font-medium uppercase tracking-[0.16em] text-brand-cyan min-[400px]:block"
+          class="mt-px hidden font-dm text-[10.5px] font-medium uppercase tracking-[0.12em] text-brand-cyan min-[400px]:block min-[400px]:tracking-[0.16em]"
         >
           Map · Track · Connect
         </small>

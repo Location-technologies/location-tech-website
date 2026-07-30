@@ -31,10 +31,12 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Syne: [400, 600, 700, 800],
+      // Plus Jakarta Sans: readable, proportional, no condensed/stretched look on mobile
+      'Plus Jakarta Sans': [400, 500, 600, 700, 800],
       'DM Sans': [300, 400, 500, 600, 700],
     },
     display: 'swap',
+    preload: true,
   },
 
   app: {
@@ -64,10 +66,11 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: [
-        '/portfolio/cricketmania',
-        '/portfolio/map-builder',
+        '/portfolio/sportsmania',
         '/portfolio/travelista',
-        '/portfolio/location-tech-portfolio',
+        '/portfolio/maplytics',
+        '/portfolio/geoguard',
+        '/portfolio/personal-finance-tracker',
       ],
     },
   },

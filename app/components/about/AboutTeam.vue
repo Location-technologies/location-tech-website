@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type TeamTier = 'directors' | 'management' | 'team-lead' | 'developers'
+type TeamTier = 'directors' | 'management' | 'team-lead' | 'developers' | 'interns'
 
 interface TeamMember {
   id: string
@@ -23,6 +23,7 @@ const tierConfig = [
   { key: 'management' as const, label: 'Management', description: 'Keeping projects on track and clients informed.' },
   { key: 'team-lead' as const, label: 'Team Lead', description: 'Hands-on engineering leadership and delivery.' },
   { key: 'developers' as const, label: 'Developers', description: 'Building the platforms that power our solutions.' },
+  { key: 'interns' as const, label: 'Interns', description: 'Growing with the team while shipping real product work.' },
 ]
 
 const membersByTier = computed(() =>

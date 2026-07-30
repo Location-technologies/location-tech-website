@@ -2,13 +2,14 @@
   "projects": [
     {
       "id": 1,
-      "slug": "cricketmania",
-      "title": "CricketMania",
-      "client": "CricketMania",
+      "slug": "sportsmania",
+      "title": "SportsMania",
+      "client": "SportsMania",
       "category": "saas",
-      "thumbnail": "/images/portfolio/cricketmania.jpg",
-      "shortDesc": "Full-stack cricket venue booking platform — web, NestJS API, and React Native app with OTP auth and real-time slot locking.",
-      "description": "CricketMania connects cricket players with bookable venues and gives venue owners a complete digital operations hub. Players browse venues by city, compare pitch availability and hourly rates, and book time slots. Owners onboard venues with multiple pitches, set day-specific operating hours, manage image galleries, and handle bookings through a secure role-based system.\n\nThe platform spans three deliverables: a Next.js 16 web frontend (App Router, React 19, Tailwind CSS v4), a production NestJS backend with PostgreSQL/Prisma (booking engine, S3 media, Twilio OTP, JWT RBAC), and a React Native Expo mobile app with glassmorphic UI for both Player and Owner roles.\n\nThe backend implements concurrent slot locking, booking lifecycle states (PENDING → CONFIRMED → COMPLETED), pricing snapshots, guest bookings, and owner-scoped venue management. The mobile app delivers venue discovery feeds, owner dashboards, gallery upload/reorder, and secure token storage via Expo Secure Store.",
+      "thumbnail": "sportsmania.jpeg",
+      "liveUrl": "https://www.sportsmania.locationtechnologies.io",
+      "shortDesc": "Full-stack sports venue booking platform — web, NestJS API, and React Native app with OTP auth and real-time slot locking.",
+      "description": "SportsMania connects players with bookable sports venues and gives venue owners a complete digital operations hub. Players browse venues by city, compare pitch availability and hourly rates, and book time slots. Owners onboard venues with multiple pitches, set day-specific operating hours, manage image galleries, and handle bookings through a secure role-based system.\n\nThe platform spans three deliverables: a Next.js 16 web frontend (App Router, React 19, Tailwind CSS v4), a production NestJS backend with PostgreSQL/Prisma (booking engine, S3 media, Twilio OTP, JWT RBAC), and a React Native Expo mobile app with glassmorphic UI for both Player and Owner roles.\n\nThe backend implements concurrent slot locking, booking lifecycle states (PENDING → CONFIRMED → COMPLETED), pricing snapshots, guest bookings, and owner-scoped venue management. The mobile app delivers venue discovery feeds, owner dashboards, gallery upload/reorder, and secure token storage via Expo Secure Store.",
       "technologies": ["TypeScript", "Next.js", "React", "NestJS", "PostgreSQL", "Prisma", "React Native", "Expo", "AWS S3", "Twilio", "JWT"],
       "year": 2025,
       "featured": true,
@@ -46,35 +47,13 @@
       ]
     },
     {
-      "id": 2,
-      "slug": "map-builder",
-      "title": "Map Builder",
-      "client": "Internal Tool",
-      "category": "mapping",
-      "thumbnail": "/images/portfolio/map-builder.jpg",
-      "shortDesc": "Enterprise geospatial platform — Mapbox frontend, Django/PostGIS backend, GeoServer automation, and AI-assisted spatial tools.",
-      "description": "Map Builder is a full-stack geospatial application for interactive mapping, dataset management, and spatial analysis. Users upload vector and raster data, visualize layers on high-performance Mapbox GL maps, draw and annotate geometries, and save project workspaces.\n\nThe Django backend processes shapefiles and GeoTIFFs via GDAL/Rasterio, stores geometries in PostGIS, and automatically provisions GeoServer workspaces and WMS/WFS layers. An OpenAI-powered assistant interprets natural-language spatial queries. Stripe handles subscriptions and usage-based billing behind JWT-protected APIs.",
-      "technologies": ["React", "Vite", "Redux Toolkit", "Mapbox GL JS", "Django", "Django REST Framework", "PostgreSQL", "PostGIS", "GeoServer", "GDAL", "AWS S3", "Stripe", "OpenAI"],
-      "year": 2025,
-      "featured": true,
-      "published": true,
-      "status": "shipped",
-      "highlights": [
-        "End-to-end geospatial ETL pipeline (GDAL, Rasterio → PostGIS)",
-        "Automated GeoServer layer publishing via REST API",
-        "Mapbox GL JS + Draw + Fabric.js for mapping and annotations",
-        "AI spatial assistant (OpenAI / pydantic-ai)",
-        "Stripe subscription and secure JWT access",
-        "Project workspaces with persisted layers, zoom, and drawings"
-      ]
-    },
-    {
       "id": 3,
       "slug": "travelista",
       "title": "Travelista",
       "client": "Travelista",
       "category": "saas",
-      "thumbnail": "/images/portfolio/travelista.jpg",
+      "thumbnail": "travellista.jpeg",
+      "liveUrl": "https://www.travelista.locationtechnologies.io",
       "shortDesc": "B2B travel agency platform — React dashboard, Django multi-tenant API, and mobile app for packages, groups, bookings, and payments.",
       "description": "Travelista streamlines travel agency operations: company onboarding, itinerary packaging, group tour administration, customer CRM, booking workflows, and payment reconciliation. The React 19 dashboard uses Redux Toolkit and RTK Query with cookie-based JWT auth, silent token refresh, and a mandatory company setup wizard before dashboard access.\n\nThe Django 5 backend implements multi-tenant company profiles, a hierarchical package engine (countries → cities → accommodations with dynamic pricing JSON), group capacity tracking, customer profiling with agency links, booking status workflows, and offline/gateway payment verification with S3 proof uploads. OpenAPI docs are generated via drf-spectacular.",
       "technologies": ["React", "Vite", "Redux Toolkit", "Django", "Django REST Framework", "PostgreSQL", "AWS S3", "JWT", "Stripe"],
@@ -132,19 +111,68 @@
       "published": false
     },
     {
-      "id": 6,
-      "slug": "location-tech-portfolio",
-      "title": "Location Tech Portfolio",
-      "client": "Location Technologies",
-      "category": "saas",
-      "thumbnail": "/images/portfolio/portfolio.jpg",
-      "shortDesc": "Company portfolio website built with Nuxt 3, Tailwind CSS v4, and GSAP.",
-      "description": "Designed and built the company's own portfolio website using Nuxt 3, Tailwind CSS v4, @nuxt/content, and GSAP animations. Features scroll-reveal effects, animated stats, filterable portfolio grid, project detail pages, and a fully responsive layout from mobile to desktop.",
-      "technologies": ["Vue.js", "Nuxt 3", "Tailwind CSS", "GSAP"],
+      "id": 7,
+      "slug": "maplytics",
+      "title": "MapLytics",
+      "client": "MapLytics",
+      "category": "mapping",
+      "thumbnail": "maplytics.jpeg",
+      "liveUrl": "https://www.maplytics.locationtechnologies.io",
+      "shortDesc": "Geospatial analytics workspace — interactive maps, spatial KPIs, and dashboard insights for location-driven decisions.",
+      "description": "MapLytics turns raw geospatial data into actionable analytics. Teams explore layers on interactive maps, filter by region and time, and surface KPIs that connect place to performance.\n\nThe product pairs a modern web mapping UI with a PostGIS-backed analytics pipeline so operators can inspect coverage, demand, and operational patterns without exporting data into separate BI tools. Role-aware access and shareable views keep stakeholders aligned on the same spatial picture.",
+      "technologies": ["React", "Mapbox GL JS", "Django", "Django REST Framework", "PostgreSQL", "PostGIS", "TypeScript"],
+      "year": 2025,
+      "featured": true,
+      "published": true,
+      "status": "shipped",
+      "highlights": [
+        "Interactive map workspace with layered geospatial views",
+        "Spatial KPIs and filters for region- and time-based analysis",
+        "PostGIS-backed analytics pipeline for location insights",
+        "Shareable dashboard views for stakeholder alignment"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "geoguard",
+      "title": "GeoGuard",
+      "client": "GeoGuard",
+      "category": "mapping",
+      "thumbnail": "geoguard.png",
+      "shortDesc": "Location safety platform — geofences, live tracking, and alert workflows across web and mobile.",
+      "description": "GeoGuard helps organizations monitor people and assets with geofenced zones, live location updates, and configurable alert workflows. Operators manage zones and responders from the web console while field users stay connected through a React Native mobile app.\n\nThe Django REST / PostGIS backend stores spatial boundaries and event history, issues JWT-secured APIs, and triggers Twilio notifications when crossings or safety thresholds are breached. React dashboards surface live maps, incident timelines, and response status so teams can act quickly.",
+      "technologies": ["Django REST Framework", "PostGIS", "React", "React Native", "JWT", "Twilio"],
       "year": 2025,
       "featured": false,
       "published": true,
-      "status": "shipped"
+      "status": "shipped",
+      "highlights": [
+        "Geofence management with PostGIS spatial boundaries",
+        "Live tracking dashboards for operators and responders",
+        "JWT-secured APIs across web and React Native clients",
+        "Twilio-powered alert and notification workflows"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "personal-finance-tracker",
+      "title": "Personal Finance Tracker",
+      "client": "Personal Finance Tracker",
+      "category": "saas",
+      "thumbnail": "personalfinancetracker.png",
+      "shortDesc": "Personal finance SaaS — budgets, expense tracking, and clear spending insights in one web app.",
+      "description": "Personal Finance Tracker helps individuals organize income, expenses, and budgets with a clean dashboard and category-level insights. Users log transactions, set monthly targets, and review trends so spending decisions stay grounded in real data.\n\nBuilt as a modern SaaS web app, it emphasizes fast entry flows, readable charts, and secure account access — giving households a lightweight alternative to spreadsheet sprawl without sacrificing clarity.",
+      "technologies": ["TypeScript", "React", "Node.js", "PostgreSQL"],
+      "year": 2025,
+      "featured": false,
+      "published": true,
+      "status": "shipped",
+      "highlights": [
+        "Budget targets with category-level expense tracking",
+        "Dashboard insights for spending trends over time",
+        "Fast transaction entry and readable financial summaries",
+        "Secure multi-user SaaS account model"
+      ]
     }
   ]
 }
