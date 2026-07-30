@@ -54,6 +54,23 @@ const bgGradients: Record<string, string> = {
   mobile: 'bg-mobile',
   ecommerce: 'bg-ecommerce',
 }
+
+const portfolioAssetImages = import.meta.glob<string>(
+  '~/assets/images/**/*.{png,jpg,jpeg,webp}',
+  { eager: true, import: 'default' },
+)
+
+function resolveThumbnail(thumbnail?: string): string | undefined {
+  if (!thumbnail) return undefined
+
+  const filename = thumbnail.split('/').pop()!
+  const asset = Object.entries(portfolioAssetImages).find(([path]) => path.endsWith(filename))
+  if (asset) return asset[1]
+
+  if (/^https?:\/\//.test(thumbnail)) return thumbnail
+
+  return undefined
+}
 </script>
 
 <template>
@@ -94,21 +111,29 @@ const bgGradients: Record<string, string> = {
           :class="{ 'pcard-hide': !isVisible(project.category) }"
         >
           <div class="pthumb relative h-[220px] overflow-hidden">
-            <div
-              class="bgfill absolute inset-0 transition-transform duration-500 group-hover:scale-[1.05]"
-              :class="bgGradients[project.category] ?? bgGradients.saas"
-            />
-            <div
-              class="pattern absolute inset-0 opacity-[0.22]"
-              style="background-image: radial-gradient(rgba(255,255,255,0.9) 1.2px, transparent 1.2px); background-size: 22px 22px;"
-              aria-hidden="true"
-            />
-            <div class="big-ic absolute inset-0 flex items-center justify-center">
-              <Icon
-                :name="categoryIcons[project.category] ?? 'mdi:briefcase'"
-                class="h-16 w-16 text-white/90"
+            <img
+              v-if="resolveThumbnail(project.thumbnail)"
+              :src="resolveThumbnail(project.thumbnail)"
+              :alt="project.title"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+            >
+            <template v-else>
+              <div
+                class="bgfill absolute inset-0 transition-transform duration-500 group-hover:scale-[1.05]"
+                :class="bgGradients[project.category] ?? bgGradients.saas"
               />
-            </div>
+              <div
+                class="pattern absolute inset-0 opacity-[0.22]"
+                style="background-image: radial-gradient(rgba(255,255,255,0.9) 1.2px, transparent 1.2px); background-size: 22px 22px;"
+                aria-hidden="true"
+              />
+              <div class="big-ic absolute inset-0 flex items-center justify-center">
+                <Icon
+                  :name="categoryIcons[project.category] ?? 'mdi:briefcase'"
+                  class="h-16 w-16 text-white/90"
+                />
+              </div>
+            </template>
             <span class="corner-tag absolute top-4 left-4 z-[3] rounded-full border border-white/18 bg-brand-dark/55 px-3 py-1.5 text-[11.5px] font-bold tracking-[0.08em] text-white uppercase backdrop-blur-[6px]">
               {{ categoryShort[project.category] ?? project.category }}
             </span>
@@ -120,14 +145,27 @@ const bgGradients: Record<string, string> = {
               <span class="ttl mt-1 font-syne text-xl font-bold text-white">
                 {{ project.title }}
               </span>
-              <button
-                type="button"
-                class="view-btn mt-3.5 inline-flex w-fit cursor-pointer items-center gap-2 rounded-full gradient-bg px-[18px] py-2.5 font-dm text-sm font-semibold text-[#04121C]"
-                @click="openProject(project.slug)"
-              >
-                View Project
-                <Icon name="mdi:arrow-right" class="h-[15px] w-[15px]" />
-              </button>
+              <div class="mt-3.5 flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  class="view-btn inline-flex w-fit cursor-pointer items-center gap-2 rounded-full gradient-bg px-[18px] py-2.5 font-dm text-sm font-semibold text-[#04121C]"
+                  @click="openProject(project.slug)"
+                >
+                  View Project
+                  <Icon name="mdi:arrow-right" class="h-[15px] w-[15px]" />
+                </button>
+                <a
+                  v-if="project.liveUrl"
+                  :href="project.liveUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-brand-dark/55 px-[18px] py-2.5 font-dm text-sm font-semibold text-white backdrop-blur-[6px] transition-colors hover:border-brand-cyan"
+                  @click.stop
+                >
+                  Visit Live Site
+                  <Icon name="mdi:open-in-new" class="h-[15px] w-[15px]" />
+                </a>
+              </div>
             </div>
           </div>
 

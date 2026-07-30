@@ -41,7 +41,7 @@ defineProps<{
         v-motion
         :initial="{ opacity: 0, y: 12 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 600, delay: 80 } }"
-        class="font-syne text-[clamp(2.875rem,6vw,5.125rem)] font-extrabold leading-none text-white"
+        class="font-syne text-[clamp(2rem,7.5vw,5rem)] font-bold leading-[1.08] tracking-tight text-white"
       >
         {{ headingLight }}<span class="gradient-text-hero">{{ headingGradient }}</span>
       </h1>

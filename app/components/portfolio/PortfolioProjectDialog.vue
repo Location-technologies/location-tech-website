@@ -69,6 +69,16 @@ function onBackdropClick(e: MouseEvent) {
           </div>
 
           <div class="flex shrink-0 flex-wrap gap-3 border-t border-white/8 px-5 py-4 sm:px-7">
+            <a
+              v-if="project.liveUrl"
+              :href="project.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/16 px-5 py-3 font-dm text-sm font-semibold text-[#C3D0E0] transition-colors hover:border-brand-cyan hover:text-white sm:flex-none"
+            >
+              Visit Live Site
+              <Icon name="mdi:open-in-new" class="h-4 w-4" />
+            </a>
             <NuxtLink
               to="/contact"
               class="inline-flex flex-1 items-center justify-center gap-2 rounded-full gradient-bg px-5 py-3 font-dm text-sm font-semibold text-[#04121C] sm:flex-none"

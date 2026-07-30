@@ -49,6 +49,16 @@ const categoryLabels: Record<string, string> = {
       <h2 class="font-syne text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold leading-[1.1] text-white">
         {{ project.title }}
       </h2>
+      <a
+        v-if="project.liveUrl"
+        :href="project.liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-3 inline-flex items-center gap-2 font-dm text-sm font-semibold text-brand-cyan transition-colors hover:text-brand-green"
+      >
+        Visit Live Site
+        <Icon name="mdi:open-in-new" class="h-4 w-4" />
+      </a>
       <p class="mt-4 text-[16.5px] leading-[1.65] text-[#94A6BE]">
         {{ project.shortDesc }}
       </p>

@@ -9,6 +9,10 @@ export type PortfolioProject = {
   technologies: string[]
   year: number
   published?: boolean
+  featured?: boolean
+  thumbnail?: string
+  liveUrl?: string
+  githubUrl?: string
   status?: 'shipped' | 'in-progress' | 'foundation'
   highlights?: string[]
   deliverables?: {

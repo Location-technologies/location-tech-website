@@ -42,7 +42,7 @@ const teamMemberSchema = z.object({
   id: z.string(),
   name: z.string(),
   role: z.string(),
-  tier: z.enum(['directors', 'management', 'team-lead', 'developers']),
+  tier: z.enum(['directors', 'management', 'team-lead', 'developers', 'interns']),
   order: z.number(),
   bio: z.string().optional(),
   photo: z.string().optional(),
