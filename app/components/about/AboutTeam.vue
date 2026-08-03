@@ -85,7 +85,7 @@ function tierGridClass(tier: TeamTier, count: number) {
     return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
   }
   if (tier === 'developers') {
-    return 'grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto'
+    return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
   }
   return 'grid-cols-1 sm:grid-cols-2'
 }

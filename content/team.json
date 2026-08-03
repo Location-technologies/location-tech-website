@@ -7,7 +7,7 @@
       "tier": "directors",
       "order": 1,
       "bio": "Sets strategic direction for Location Technologies' GIS and software delivery.",
-      "photo": "assets/images/abdulkhaliq.jpeg"
+      "photo": "assets/images/abdulkhaliq.png"
     },
     {
       "id": "muhammad-nabeel-mubashir",
@@ -52,20 +52,29 @@
     {
       "id": "saad-anees",
       "name": "Saad Anees",
-      "role": "Web Developer",
-      "tier": "interns",
+      "role": "Backend Engineer",
+      "tier": "developers",
       "order": 1,
-      "bio": "Contributes to web frontends and product UI across client projects.",
+      "bio": "Develops and maintains scalable backend services, APIs, and databases for robust applications.",
       "photo": "assets/images/saad.jpeg"
     },
     {
       "id": "m-naeem-sarwar",
       "name": "M Naeem Sarwar",
-      "role": "Mobile App",
-      "tier": "interns",
+      "role": "Mobile App Developer",
+      "tier": "developers",
       "order": 2,
-      "bio": "Builds and ships mobile experiences with the engineering team.",
+      "bio": "Designs and builds high-quality, user-centric mobile applications for cross-platform delivery.",
       "photo": "assets/images/naeem.jpeg"
+    },
+    {
+      "id": "abdullah",
+      "name": "Abdullah",
+      "role": "Frontend Developer",
+      "tier": "developers",
+      "order": 3,
+      "bio": "Crafts responsive and intuitive web interfaces, ensuring a seamless user experience.",
+      "photo": "assets/images/abdullah.jpeg"
     }
   ]
 }

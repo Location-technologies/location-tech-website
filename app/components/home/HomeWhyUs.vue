@@ -95,7 +95,7 @@ const { el: rightEl, isVisible: rightVisible } = useScrollReveal()
           </div>
         </div>
 
-        <!-- Floating chips — inline on mobile, floating on larger screens -->
+        <!-- Floating chips -->
         <div class="mt-4 flex flex-col gap-3 min-[400px]:mt-0">
           <div class="relative z-[3] flex items-center gap-3 rounded-[15px] border border-brand-cyan/30 bg-[rgba(11,28,48,0.92)] px-4 py-3 shadow-[0_18px_44px_-20px_rgba(0,0,0,0.8)] backdrop-blur-[10px] min-[400px]:absolute min-[400px]:top-2 min-[400px]:right-0 min-[400px]:px-[18px] min-[400px]:py-3.5 lg:-right-3">
             <span class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[11px] gradient-bg">
