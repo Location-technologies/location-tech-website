@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       // Plus Jakarta Sans: readable, proportional, no condensed/stretched look on mobile
-      'Plus Jakarta Sans': [400, 500, 600, 700],
+      'Plus Jakarta Sans': [400, 500, 600, 700, 800],
       'DM Sans': [400, 500, 600, 700],
     },
     display: 'swap',

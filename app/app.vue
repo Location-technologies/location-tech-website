@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { BRAND_LOGOS } from '~/constants/brand'
+import faviconNew from '~/assets/images/ChatGPT Image Aug 5, 2026, 05_57_23 PM.png'
 
 useHead({
-  link: [{ rel: 'icon', type: 'image/jpeg', href: BRAND_LOGOS.logoWhiteBg }],
+  link: [{ rel: 'icon', type: 'image/png', href: faviconNew }],
   meta: [{ property: 'og:image', content: BRAND_LOGOS.logoWhiteBg }],
 })
 </script>

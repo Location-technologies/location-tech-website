@@ -27,10 +27,7 @@ const trustStats = [
       <div class="grid items-center gap-8 min-[400px]:gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
         <!-- Left copy -->
         <div
-          v-motion
-          :initial="{ opacity: 0, x: -40 }"
-          :enter="{ opacity: 1, x: 0, transition: { duration: 700, delay: 100 } }"
-          class="w-full min-w-0 max-w-[620px]"
+          class="w-full min-w-0 max-w-[620px] opacity-0 animate-fade-in-right"
         >
           <span class="block font-dm text-[11px] font-semibold uppercase tracking-[0.08em] text-brand-cyan min-[400px]:text-[13px] min-[400px]:tracking-[0.14em]">
             Software Engineering & Location Technology
@@ -75,10 +72,7 @@ const trustStats = [
 
         <!-- Right globe visual -->
         <div
-          v-motion
-          :initial="{ opacity: 0, scale: 0.85 }"
-          :enter="{ opacity: 1, scale: 1, transition: { duration: 800, delay: 300 } }"
-          class="relative order-first grid min-h-[260px] place-items-center overflow-hidden min-[400px]:min-h-[360px] lg:order-none lg:min-h-[460px]"
+          class="relative order-first grid min-h-[260px] place-items-center overflow-hidden opacity-0 animate-pop-in min-[400px]:min-h-[360px] lg:order-none lg:min-h-[460px]"
         >
           <div class="relative mx-auto h-[220px] w-[220px] max-w-full animate-float min-[400px]:h-[300px] min-[400px]:w-[300px] lg:h-[400px] lg:w-[400px]">
             <!-- Pulsing rings -->
