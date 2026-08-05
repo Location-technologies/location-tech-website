@@ -24,7 +24,7 @@ const { el, isVisible } = useScrollReveal()
 
     <!-- Background: aerial image, darkened -->
     <div class="absolute inset-0 z-0">
-      <img
+      <NuxtImg
         :src="heroBg"
         alt=""
         aria-hidden="true"

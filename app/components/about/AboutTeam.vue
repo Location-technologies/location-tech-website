@@ -176,7 +176,7 @@ const memberMotionDelays = computed(() => {
                 :style="{ width: `${avatarSize(tier.key)}px`, height: `${avatarSize(tier.key)}px` }"
               >
                 <div class="h-full w-full overflow-hidden rounded-full bg-[#e8f4f6]">
-                  <img
+                  <NuxtImg
                     v-if="showPhoto(member)"
                     :src="resolvePhoto(member.photo)"
                     :alt="`${member.name}, ${member.role} at Location Technologies`"
@@ -185,7 +185,7 @@ const memberMotionDelays = computed(() => {
                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                     @error="onPhotoError(member.id)"
-                  >
+                  />
                   <div
                     v-else
                     class="flex h-full w-full items-center justify-center bg-gradient-to-br from-brand-cyan/15 to-brand-green/15"

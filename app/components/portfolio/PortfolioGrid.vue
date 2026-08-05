@@ -111,12 +111,12 @@ function resolveThumbnail(thumbnail?: string): string | undefined {
           :class="{ 'pcard-hide': !isVisible(project.category) }"
         >
           <div class="pthumb relative h-[220px] overflow-hidden">
-            <img
+            <NuxtImg
               v-if="resolveThumbnail(project.thumbnail)"
               :src="resolveThumbnail(project.thumbnail)"
               :alt="project.title"
               class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-            >
+            />
             <template v-else>
               <div
                 class="bgfill absolute inset-0 transition-transform duration-500 group-hover:scale-[1.05]"

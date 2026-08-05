@@ -8,15 +8,15 @@ const steps = [
   },
   {
     n: '2',
-    title: 'System Design',
-    desc: 'We architect the solution — data models, integrations, and dashboards built to scale.',
-    icon: 'mdi:sitemap',
-  },
-  {
-    n: '3',
     title: 'UI Wireframing & Design',
     desc: 'We craft intuitive interfaces and interactive wireframes to map out the complete user journey.',
     icon: 'mdi:monitor-dashboard',
+  },
+  {
+    n: '3',
+    title: 'System Design',
+    desc: 'We architect the solution — data models, integrations, and dashboards built to scale.',
+    icon: 'mdi:sitemap',
   },
   {
     n: '4',
