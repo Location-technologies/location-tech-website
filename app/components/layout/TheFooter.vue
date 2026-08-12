@@ -7,6 +7,13 @@ const navLinks = [
   { label: 'Contact', to: '/contact' },
 ]
 
+const policyLinks = [
+  { label: 'Privacy Policy', to: '/privacy/sportsmania' },
+  { label: 'Refund Policy', to: '/privacy/sportsmania-refund' },
+  { label: 'Service Delivery Policy', to: '/privacy/sportsmania-shipping' },
+  { label: 'Business Model', to: '/privacy/sportsmania-business-model' },
+]
+
 const services = [
   { label: 'Geographic & Web Mapping', to: '/services' },
   { label: 'SaaS & PaaS Development', to: '/services' },
@@ -29,10 +36,10 @@ const year = new Date().getFullYear()
       <!--
         Mobile (<560px): 1 column
         Tablet (560–980px): 2 columns — brand + contact span full width
-        Desktop (981px+): 4 columns
+        Desktop (981px+): 5 columns
       -->
       <div
-        class="grid grid-cols-1 gap-8 min-[560px]:grid-cols-2 min-[560px]:gap-10 min-[981px]:grid-cols-[1.6fr_1fr_1fr_1.3fr] min-[981px]:gap-12"
+        class="grid grid-cols-1 gap-8 min-[560px]:grid-cols-2 min-[560px]:gap-10 min-[981px]:grid-cols-[1.6fr_1fr_1.5fr_1fr_1.3fr] min-[981px]:gap-8"
       >
         <!-- Brand -->
         <div class="min-w-0 min-[560px]:col-span-2 min-[981px]:col-span-1">
@@ -67,6 +74,23 @@ const year = new Date().getFullYear()
           </h4>
           <ul class="flex flex-col gap-3 min-[400px]:gap-[13px]">
             <li v-for="link in navLinks" :key="link.to">
+              <NuxtLink
+                :to="link.to"
+                class="text-sm text-[#94A6BE] transition-colors duration-200 hover:text-brand-cyan min-[400px]:text-[15px]"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Legal & Policies -->
+        <div class="min-w-0">
+          <h4 class="mb-4 font-syne text-base font-bold text-white min-[400px]:mb-[22px]">
+            Legal
+          </h4>
+          <ul class="flex flex-col gap-3 min-[400px]:gap-[13px]">
+            <li v-for="link in policyLinks" :key="link.to">
               <NuxtLink
                 :to="link.to"
                 class="text-sm text-[#94A6BE] transition-colors duration-200 hover:text-brand-cyan min-[400px]:text-[15px]"
@@ -114,7 +138,7 @@ const year = new Date().getFullYear()
             </li>
             <li class="flex items-start gap-3 text-sm leading-normal text-[#94A6BE] min-[400px]:text-[15px]">
               <Icon name="mdi:map-marker-outline" class="mt-0.5 h-[17px] w-[17px] shrink-0 text-brand-cyan" />
-              <span>Chakwal, Punjab, Pakistan</span>
+              <span>House No. MCB 1/586, Mohallah Jafrabad,<br>Tehsil & District Chakwal</span>
             </li>
           </ul>
         </div>
