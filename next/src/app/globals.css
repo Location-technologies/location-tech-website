@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+/* Placeholder only — full palette (primary/secondary/neutrals/semantic/
+   gradient) is ported deliberately in P02, not copy-pasted from the Nuxt
+   app/assets/css/main.css @theme block. See MIGRATION.md > Decisions. */
+@theme {
+  --color-brand-ink: #0a1628;
+}

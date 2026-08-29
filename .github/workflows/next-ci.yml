@@ -1,0 +1,39 @@
+name: Next.js CI
+
+on:
+  push:
+    branches:
+      - feat/issue-32-nextjs-foundations
+  pull_request:
+    branches:
+      - feat/issue-32-nextjs-foundations
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Read Node version
+        id: node-version
+        run: echo "version=$(cat .nvmrc)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.node-version.outputs.version }}
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm --filter next exec tsc --noEmit
+
+      - name: Lint
+        run: pnpm --filter next lint
+
+      - name: Build
+        run: pnpm --filter next build
