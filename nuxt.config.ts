@@ -72,12 +72,17 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
+      failOnError: false,
       routes: [
         '/portfolio/sportsmania',
         '/portfolio/travelista',
         '/portfolio/maplytics',
         '/portfolio/geoguard',
         '/portfolio/personal-finance-tracker',
+        '/privacy/sportsmania',
+        '/privacy/sportsmania-refund',
+        '/privacy/sportsmania-shipping',
+        '/privacy/sportsmania-business-model',
       ],
     },
   },

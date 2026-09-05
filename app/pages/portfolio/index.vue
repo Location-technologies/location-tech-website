@@ -23,3 +23,4 @@ useSeoMeta({
   description: 'Explore our portfolio of SaaS platforms, geospatial tools, and full-stack applications built by Location Technologies.',
 })
 </script>
+
